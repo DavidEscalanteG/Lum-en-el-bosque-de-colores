@@ -1,0 +1,101 @@
+[gd_scene load_steps=11 format=3 uid="uid://c68icpvnsiwvt"]
+
+[ext_resource type="Script" uid="uid://o5wgjkwas78x" path="res://volver_ajugar_3.gd" id="1_jhnoc"]
+[ext_resource type="Texture2D" uid="uid://b2nkdgnnw4lmu" path="res://volver1.png" id="2_vbkeb"]
+[ext_resource type="Texture2D" uid="uid://haujf50juq8n" path="res://Scenes/tablita2.png" id="3_p13wt"]
+[ext_resource type="Texture2D" uid="uid://cjfjnow8cfqwd" path="res://Images/Fondos/Lumi_Sprite1_Ojos.png" id="4_odud6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x5cxd"]
+
+[sub_resource type="SystemFont" id="SystemFont_mmcno"]
+resource_local_to_scene = true
+resource_name = "ups"
+font_names = PackedStringArray("", "", "", "")
+font_italic = true
+font_weight = 500
+msdf_pixel_range = 31
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2xfqx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64enm"]
+bg_color = Color(5.536738, 5.536738, 5.536738, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vnlnm"]
+bg_color = Color(0.17697689, 0.08282862, 0.50001174, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 18
+border_color = Color(0.083392, 0.083392, 0.08339202, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3y4i"]
+bg_color = Color(0.36207443, 0.24293083, 0.9085077, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.11764706, 0.08235294, 0.24313726, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="VolverAjugar3" type="CanvasLayer"]
+script = ExtResource("1_jhnoc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.615686)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vbkeb")
+expand_mode = 1
+
+[node name="Tablita2" type="Sprite2D" parent="."]
+position = Vector2(611, 103)
+scale = Vector2(0.4296875, 0.34305555)
+texture = ExtResource("3_p13wt")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 2
+material = SubResource("ShaderMaterial_x5cxd")
+offset_left = 310.0
+offset_top = 76.0
+offset_right = 931.0
+offset_bottom = 254.0
+theme_type_variation = &"GraphNodeTitleLabel"
+theme_override_colors/font_color = Color(0.42245397, 0.1596652, 0.008369649, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.254902, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_mmcno")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxTexture_2xfqx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_64enm")
+text = "¡Vamos a volver a intentarlo!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="reintentar" type="Button" parent="."]
+offset_left = 358.0
+offset_top = 298.0
+offset_right = 816.0
+offset_bottom = 401.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vnlnm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g3y4i")
+text = "Volver a jugar"
+
+[node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
+position = Vector2(131, 446)
+scale = Vector2(0.58060455, 0.5552093)
+texture = ExtResource("4_odud6")
+flip_h = true
+
+[connection signal="pressed" from="reintentar" to="." method="_on_reintentar_pressed"]

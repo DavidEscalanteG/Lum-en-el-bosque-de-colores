@@ -1,0 +1,109 @@
+[gd_scene load_steps=12 format=3 uid="uid://hy35yaylab40"]
+
+[ext_resource type="Script" uid="uid://tk8d4qhiiplh" path="res://resultados.gd" id="1_atr5v"]
+[ext_resource type="Texture2D" uid="uid://wikws4t4oyey" path="res://Images/Fondo Felicidades.png" id="1_fpedf"]
+[ext_resource type="Texture2D" uid="uid://haujf50juq8n" path="res://Scenes/tablita2.png" id="3_8tj61"]
+[ext_resource type="AudioStream" uid="uid://c2ckyfev31i2p" path="res://Images/SpotiDownloader.com - Aplausos, Ovaci+¦n - Limbo Project.mp3" id="4_l07eg"]
+[ext_resource type="AudioStream" uid="uid://iiq3vtuhconq" path="res://Scripts/fekicid.mp3" id="5_e1s8d"]
+[ext_resource type="Texture2D" uid="uid://cuurmpavdyvlh" path="res://Scenes/Nico.png" id="6_5y50v"]
+[ext_resource type="Texture2D" uid="uid://o63r4dq5qyln" path="res://Images/Lumi_Sprite1_Ojos.png" id="7_ecvd6"]
+
+[sub_resource type="SystemFont" id="SystemFont_atr5v"]
+font_italic = true
+font_weight = 500
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8tj61"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_01p4c"]
+bg_color = Color(0.798389, 0.542235, 3.85046e-07, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 12
+border_color = Color(0.549828, 0.366736, 3.85046e-07, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l07eg"]
+bg_color = Color(0.643137, 0.431373, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.541176, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Resultados" type="CanvasLayer"]
+script = ExtResource("1_atr5v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.615686)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fpedf")
+expand_mode = 1
+
+[node name="Tablita2" type="Sprite2D" parent="."]
+position = Vector2(596, 65)
+scale = Vector2(0.52760416, 0.37962964)
+texture = ExtResource("3_8tj61")
+
+[node name="Titulo" type="Label" parent="."]
+texture_filter = 2
+offset_left = 266.0
+offset_top = 80.0
+offset_right = 971.0
+offset_bottom = 196.0
+theme_type_variation = &"GraphNodeTitleLabel"
+theme_override_colors/font_color = Color(0.30539086, 0.47868997, 0.3548197, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_atr5v")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8tj61")
+text = "Tu puntuación es:"
+
+[node name="BotonAccion" type="Button" parent="."]
+offset_left = 370.0
+offset_top = 398.0
+offset_right = 824.0
+offset_bottom = 481.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_01p4c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l07eg")
+
+[node name="Resumen" type="Label" parent="."]
+offset_left = 434.0
+offset_top = 188.0
+offset_right = 750.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sonido2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_l07eg")
+volume_db = -8.238
+
+[node name="sonido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_e1s8d")
+
+[node name="Nico" type="Sprite2D" parent="."]
+position = Vector2(201, 391)
+scale = Vector2(0.5088161, 0.49755117)
+texture = ExtResource("6_5y50v")
+
+[node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
+position = Vector2(1052.0001, 438.99997)
+scale = Vector2(0.605164, 0.587378)
+texture = ExtResource("7_ecvd6")
+
+[connection signal="pressed" from="BotonAccion" to="." method="_on_boton_accion_pressed"]

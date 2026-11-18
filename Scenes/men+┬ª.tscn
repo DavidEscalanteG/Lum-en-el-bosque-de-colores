@@ -1,0 +1,153 @@
+[gd_scene load_steps=9 format=3 uid="uid://mpeargqy7wa1"]
+
+[ext_resource type="Script" uid="uid://qf6h2yb5r0ql" path="res://nivel_3.gd" id="1_ldhss"]
+[ext_resource type="Texture2D" uid="uid://bdktqfjih4857" path="res://Scenes/Cascada.png" id="1_vd70p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jc6x"]
+bg_color = Color(0.23529412, 0.78431374, 0.36078432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.16574141, 0.5340404, 0.2453121, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_foow7"]
+bg_color = Color(0.16862746, 0.54509807, 0.2509804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol0td"]
+bg_color = Color(1, 0.15294118, 0.34117648, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.6960884, 0, 0.2082215, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ai75a"]
+bg_color = Color(0.69803923, 0, 0.20784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmouq"]
+bg_color = Color(0, 0.70610124, 0.5219598, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(5.5350364e-07, 0.36985338, 0.26693827, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iukwk"]
+bg_color = Color(0, 0.43137255, 0.3137255, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Nivel3" type="CanvasLayer"]
+script = ExtResource("1_ldhss")
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("1_vd70p")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ContenedorMemoria" type="VBoxContainer" parent="."]
+offset_left = 367.0
+offset_top = 190.0
+offset_right = 407.0
+offset_bottom = 230.0
+
+[node name="PalabraMostrar" type="Label" parent="ContenedorMemoria"]
+layout_mode = 2
+
+[node name="ImagenMostrar" type="TextureRect" parent="ContenedorMemoria"]
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 1
+stretch_mode = 3
+
+[node name="ContenedorPregunta" type="VBoxContainer" parent="."]
+offset_left = 592.0
+offset_top = 202.0
+offset_right = 632.0
+offset_bottom = 252.0
+
+[node name="PreguntaLabel" type="Label" parent="ContenedorPregunta"]
+layout_mode = 2
+
+[node name="PalabraPregunta" type="Label" parent="ContenedorPregunta"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 281.0
+offset_top = 422.0
+offset_right = 926.0
+offset_bottom = 545.0
+
+[node name="BotonVerdadero" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.42
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_5jc6x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_foow7")
+text = "Verdadero"
+
+[node name="BotonFalso" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.42
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_ol0td")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ai75a")
+text = "Falso"
+
+[node name="Retroalimentación" type="Label" parent="."]
+offset_left = 146.0
+offset_top = 357.0
+offset_right = 186.0
+offset_bottom = 380.0
+
+[node name="TimerMemoria" type="Timer" parent="."]
+
+[node name="TimerRonda" type="Timer" parent="."]
+
+[node name="Siguiente" type="Button" parent="."]
+offset_left = 489.0
+offset_top = 570.0
+offset_right = 715.0
+offset_bottom = 635.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_lmouq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iukwk")
+text = "Siguiente"
+
+[connection signal="timeout" from="TimerMemoria" to="." method="_on_timer_memoria_timeout"]
+[connection signal="timeout" from="TimerRonda" to="." method="_on_timer_ronda_timeout"]

@@ -1,0 +1,404 @@
+[gd_scene load_steps=41 format=3 uid="uid://b322t4ybpmkki"]
+
+[ext_resource type="Script" uid="uid://boootia7tlqlw" path="res://menu_1.gd" id="1_nlgmy"]
+[ext_resource type="Texture2D" uid="uid://dfi1cjqfmqaxr" path="res://Images/Fondo_inicio.jpeg" id="1_y6lys"]
+[ext_resource type="AudioStream" uid="uid://ww6mhvxl06xw" path="res://hablando.mp3" id="4_f3k0m"]
+[ext_resource type="Texture2D" uid="uid://c2uselk4ptnii" path="res://Animacion/Lumi_estatico.png" id="4_jg0vy"]
+[ext_resource type="Texture2D" uid="uid://yg8u34mmdscl" path="res://Animacion/Luna_hablando.png" id="5_ptmaf"]
+[ext_resource type="Texture2D" uid="uid://c5aidwj5vxxnu" path="res://Animacion/Tilo_hablando.png" id="6_4q8fo"]
+[ext_resource type="Texture2D" uid="uid://dyesm6wiwb3xv" path="res://Animacion/Lumi_hablando.png" id="6_7gie1"]
+[ext_resource type="Texture2D" uid="uid://pw4bhged8wvn" path="res://Animacion/Mia_hablando.png" id="6_nb48e"]
+[ext_resource type="Texture2D" uid="uid://646ddlu1sivq" path="res://Animacion/Nico_hablando.png" id="6_pjttm"]
+[ext_resource type="Texture2D" uid="uid://cd5hhyb3y0ecs" path="res://Animacion/Bruno_hablando.png" id="6_ptmaf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3k0m"]
+bg_color = Color(3.657937e-06, 0.6408719, 0.9340975, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 5
+border_color = Color(0, 0.44923902, 0.66286963, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yqr6"]
+bg_color = Color(0, 0.4509804, 0.6627451, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6lys"]
+bg_color = Color(0.9579626, 0.72800976, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.6512615, 0.48976755, 0, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlgmy"]
+bg_color = Color(0.6509804, 0.49019608, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg0vy"]
+bg_color = Color(0.9021636, 0.5348572, 0.89871377, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.7145494, 0.19577712, 0.7218891, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ptmaf"]
+bg_color = Color(0.7137255, 0.19607843, 0.72156864, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrc5a"]
+atlas = ExtResource("4_jg0vy")
+region = Rect2(0, 1592, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooqro"]
+atlas = ExtResource("5_ptmaf")
+region = Rect2(0, 0, 947, 947)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q88i0"]
+atlas = ExtResource("5_ptmaf")
+region = Rect2(947, 0, 947, 947)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq6wu"]
+atlas = ExtResource("5_ptmaf")
+region = Rect2(1894, 0, 947, 947)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51quf"]
+atlas = ExtResource("5_ptmaf")
+region = Rect2(0, 947, 947, 947)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m24bb"]
+atlas = ExtResource("5_ptmaf")
+region = Rect2(947, 947, 947, 947)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kouvu"]
+atlas = ExtResource("5_ptmaf")
+region = Rect2(1894, 947, 947, 947)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf732"]
+atlas = ExtResource("6_nb48e")
+region = Rect2(0, 0, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7icir"]
+atlas = ExtResource("6_pjttm")
+region = Rect2(0, 0, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao47k"]
+atlas = ExtResource("6_4q8fo")
+region = Rect2(0, 796, 796, 796)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xyxhe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrc5a")
+}],
+"loop": true,
+"name": &"Lumi",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooqro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q88i0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq6wu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51quf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m24bb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kouvu")
+}],
+"loop": true,
+"name": &"Luna",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf732")
+}],
+"loop": true,
+"name": &"Mia",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7icir")
+}],
+"loop": true,
+"name": &"Nico",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao47k")
+}],
+"loop": true,
+"name": &"Tilo",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyxhe"]
+atlas = ExtResource("6_ptmaf")
+region = Rect2(796, 0, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb8rm"]
+atlas = ExtResource("6_7gie1")
+region = Rect2(0, 0, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbd7t"]
+atlas = ExtResource("6_7gie1")
+region = Rect2(796, 0, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqbh0"]
+atlas = ExtResource("6_7gie1")
+region = Rect2(1592, 0, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecxp0"]
+atlas = ExtResource("6_7gie1")
+region = Rect2(0, 796, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os7ds"]
+atlas = ExtResource("6_7gie1")
+region = Rect2(796, 796, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h61hr"]
+atlas = ExtResource("6_7gie1")
+region = Rect2(1592, 796, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfjw2"]
+atlas = ExtResource("5_ptmaf")
+region = Rect2(947, 0, 947, 947)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7icir"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyxhe")
+}],
+"loop": true,
+"name": &"Bruno",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb8rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbd7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqbh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecxp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_os7ds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h61hr")
+}],
+"loop": true,
+"name": &"Lumi",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfjw2")
+}],
+"loop": true,
+"name": &"Luna",
+"speed": 6.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjttm"]
+bg_color = Color(0.8891568, 0.4845425, 0.19657731, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.69624555, 0.3602821, 0.098657824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nb48e"]
+bg_color = Color(0.69567406, 0.3604483, 0.10751013, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8862745, 0.4862745, 0.19607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf732"]
+bg_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.77477276, 0.023690943, 0.11126342, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0runr"]
+bg_color = Color(0.675802, 0.018954432, 0.091600575, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="menu1" type="CanvasLayer"]
+script = ExtResource("1_nlgmy")
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("1_y6lys")
+expand_mode = 1
+flip_h = true
+
+[node name="Siguiente" type="Button" parent="."]
+offset_left = 121.0
+offset_top = 83.0
+offset_right = 501.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_f3k0m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5yqr6")
+text = "Jugar
+"
+
+[node name="Siguiente2" type="Button" parent="."]
+offset_left = 125.0
+offset_top = 160.0
+offset_right = 499.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_y6lys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nlgmy")
+text = "Instrucciones"
+
+[node name="Siguiente3" type="Button" parent="."]
+offset_left = 125.0
+offset_top = 239.0
+offset_right = 498.0
+offset_bottom = 307.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_jg0vy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ptmaf")
+text = "Créditos"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_f3k0m")
+autoplay = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Luna" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(714, 350)
+scale = Vector2(0.63224006, 0.6093569)
+sprite_frames = SubResource("SpriteFrames_xyxhe")
+animation = &"Lumi"
+
+[node name="Mia" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(989.00006, 107)
+scale = Vector2(0.181698, 0.16146237)
+sprite_frames = SubResource("SpriteFrames_xyxhe")
+animation = &"Mia"
+
+[node name="Nico" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(378, 433)
+scale = Vector2(0.42290393, 0.40015572)
+sprite_frames = SubResource("SpriteFrames_xyxhe")
+animation = &"Nico"
+frame_progress = 0.91169566
+
+[node name="Tilo" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(172, 456)
+scale = Vector2(0.38521546, 0.35367334)
+sprite_frames = SubResource("SpriteFrames_xyxhe")
+animation = &"Tilo"
+flip_h = true
+
+[node name="Lumi" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(994.99994, 403.99997)
+scale = Vector2(0.56424046, 0.5492218)
+sprite_frames = SubResource("SpriteFrames_7icir")
+animation = &"Luna"
+
+[node name="Bruno" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(1029, 307.00003)
+scale = Vector2(0.2720698, 0.23817873)
+sprite_frames = SubResource("SpriteFrames_7icir")
+animation = &"Bruno"
+frame_progress = 0.017795734
+
+[node name="Minimizar" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 3.0
+offset_right = 1113.0
+offset_bottom = 37.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pjttm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nb48e")
+text = "-"
+
+[node name="Cerrar" type="Button" parent="."]
+offset_left = 1115.0
+offset_top = 3.0
+offset_right = 1148.0
+offset_bottom = 36.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jf732")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0runr")
+text = "x"
+
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Siguiente2" to="." method="_on_siguiente_2_pressed"]
+[connection signal="pressed" from="Siguiente3" to="." method="_on_siguiente_3_pressed"]
+[connection signal="pressed" from="Minimizar" to="." method="_on_minimizar_pressed"]
+[connection signal="pressed" from="Cerrar" to="." method="_on_cerrar_pressed"]

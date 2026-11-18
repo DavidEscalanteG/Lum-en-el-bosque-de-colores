@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://8xygfprsei7"]
+
+[ext_resource type="Texture2D" uid="uid://wikws4t4oyey" path="res://Images/Fondo Felicidades.png" id="1_6gog7"]
+[ext_resource type="Script" uid="uid://bye8gfbqirx2i" path="res://volver_ajugar_5.gd" id="1_45v0q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_45v0q"]
+
+[sub_resource type="SystemFont" id="SystemFont_h6ife"]
+resource_local_to_scene = true
+resource_name = "ups"
+font_names = PackedStringArray("", "", "", "")
+font_italic = true
+font_weight = 500
+msdf_pixel_range = 31
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2p5py"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg48t"]
+bg_color = Color(5.536738, 5.536738, 5.536738, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbx4s"]
+bg_color = Color(0.17697689, 0.08282862, 0.50001174, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 18
+border_color = Color(0.083392, 0.083392, 0.08339202, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4txaq"]
+bg_color = Color(0.36207443, 0.24293083, 0.9085077, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.11764706, 0.08235294, 0.24313726, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="VolverAjugar5" type="CanvasLayer"]
+script = ExtResource("1_45v0q")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.615686)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6gog7")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 2
+material = SubResource("ShaderMaterial_45v0q")
+offset_left = 318.0
+offset_top = 88.0
+offset_right = 859.0
+offset_bottom = 266.0
+theme_type_variation = &"GraphNodeTitleLabel"
+theme_override_colors/font_color = Color(0.8039216, 0.011764706, 0.039215688, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.254902, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_h6ife")
+theme_override_font_sizes/font_size = 130
+theme_override_styles/normal = SubResource("StyleBoxTexture_2p5py")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dg48t")
+text = "¡Ups!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="reintentar" type="Button" parent="."]
+offset_left = 358.0
+offset_top = 298.0
+offset_right = 816.0
+offset_bottom = 401.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_cbx4s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4txaq")
+text = "Volver a jugar"

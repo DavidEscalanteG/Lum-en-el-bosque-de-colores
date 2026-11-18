@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0swqxvla0w1e"]
+
+[ext_resource type="Script" uid="uid://cvjto4t1spoqs" path="res://Scenes/instrucciones.gd" id="1_7lvqj"]
+[ext_resource type="Texture2D" uid="uid://bdsjl02mvpkuo" path="res://Images/Fondos/fondo instrcciones.png" id="1_swyqy"]
+[ext_resource type="Texture2D" uid="uid://cgf0jbcyral1p" path="res://Images/Fondos/mano.png" id="2_mrrf5"]
+[ext_resource type="Texture2D" uid="uid://fvjsrtcbvupw" path="res://Images/Fondos/flecha.png" id="4_ad1r2"]
+[ext_resource type="AudioStream" uid="uid://sj6hy38tl7pw" path="res://Sounds/Sonido-Burbuja.mp3" id="5_rgpck"]
+[ext_resource type="Texture2D" uid="uid://o63r4dq5qyln" path="res://Images/Lumi_Sprite1_Ojos.png" id="6_7hwpc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lvqj"]
+bg_color = Color(0, 0.62972724, 0.97985154, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(1.92523e-06, 0.44483763, 0.70333743, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad1r2"]
+bg_color = Color(0, 0.44313726, 0.7019608, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Instrucciones" type="Node2D"]
+script = ExtResource("1_7lvqj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 649.0
+texture = ExtResource("1_swyqy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 172.0
+offset_right = 691.0
+offset_bottom = 259.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Usa el mouse o el dedo (en pantalla tactil)
+para interatuar con los elementos."
+
+[node name="Label2" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 431.0
+offset_right = 695.0
+offset_bottom = 518.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Si necesitas ayuda, toca el botón de ayuda
+en  la esquina superior."
+
+[node name="Label" type="Label" parent="."]
+offset_left = 71.0
+offset_top = 48.0
+offset_right = 365.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(0.305473, 0.228284, 0.202473, 1)
+theme_override_colors/font_shadow_color = Color(0.332881, 0.332881, 0.332881, 1)
+theme_override_font_sizes/font_size = 45
+text = "Instrucciones"
+
+[node name="Mano" type="Sprite2D" parent="."]
+position = Vector2(246, 359)
+scale = Vector2(0.246354, 0.269444)
+texture = ExtResource("2_mrrf5")
+
+[node name="Flecha" type="Sprite2D" parent="."]
+position = Vector2(449, 355)
+scale = Vector2(0.232292, 0.231481)
+texture = ExtResource("4_ad1r2")
+
+[node name="Regresar1" type="Button" parent="."]
+offset_left = 872.0
+offset_top = 557.0
+offset_right = 1094.0
+offset_bottom = 615.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_7lvqj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ad1r2")
+text = "Regresar"
+
+[node name="Click" type="AudioStreamPlayer" parent="Regresar1"]
+stream = ExtResource("5_rgpck")
+
+[node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
+position = Vector2(974, 305)
+scale = Vector2(0.697733, 0.644256)
+texture = ExtResource("6_7hwpc")
+
+[connection signal="pressed" from="Regresar1" to="." method="_on_regresar_1_pressed"]

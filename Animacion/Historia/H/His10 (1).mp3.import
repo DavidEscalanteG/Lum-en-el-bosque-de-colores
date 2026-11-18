@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://l8rjaijuuj2e"
+path="res://.godot/imported/His10 (1).mp3-507919d994a7379fb2df9fd06573ccfa.mp3str"
+
+[deps]
+
+source_file="res://Animacion/Historia/H/His10 (1).mp3"
+dest_files=["res://.godot/imported/His10 (1).mp3-507919d994a7379fb2df9fd06573ccfa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

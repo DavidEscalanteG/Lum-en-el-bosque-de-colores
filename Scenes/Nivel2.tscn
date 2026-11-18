@@ -1,0 +1,339 @@
+[gd_scene load_steps=28 format=3 uid="uid://de3wn1lhw18x3"]
+
+[ext_resource type="Script" uid="uid://bs2yb84aeww2b" path="res://Scenes/nivel_2.gd" id="1_73c3a"]
+[ext_resource type="Texture2D" uid="uid://2bjkobgesm8g" path="res://Images/Fondos/Rio.png" id="1_opu0y"]
+[ext_resource type="Texture2D" uid="uid://2i8116kxxl1l" path="res://Scenes/tablita.png" id="3_3obr3"]
+[ext_resource type="AudioStream" uid="uid://c2ckyfev31i2p" path="res://Images/SpotiDownloader.com - Aplausos, Ovaci+¦n - Limbo Project.mp3" id="3_k8txx"]
+[ext_resource type="AudioStream" uid="uid://c88ra088dfnoq" path="res://Images/rechazo.mp3" id="4_70v5a"]
+[ext_resource type="Texture2D" uid="uid://5rtd217mjdyq" path="res://Scenes/Bruno.png" id="4_y3tg0"]
+[ext_resource type="Texture2D" uid="uid://o63r4dq5qyln" path="res://Images/Lumi_Sprite1_Ojos.png" id="5_k42pf"]
+[ext_resource type="AudioStream" uid="uid://brqtar1y2lpho" path="res://Images/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3" id="6_b0ly4"]
+[ext_resource type="AudioStream" uid="uid://0v1mu7xry3qw" path="res://Scenes/SpotiDownloader.com - M+¦sica Instrumental Relajante Y Sonidos De P+íjaros - Incy Wincy Ara+¦a.mp3" id="9_3obr3"]
+[ext_resource type="Texture2D" uid="uid://haujf50juq8n" path="res://Scenes/tablita2.png" id="10_ix6gb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6t7mp"]
+bg_color = Color(0.0624739, 0.310982, 0.486406, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7n66j"]
+bg_color = Color(0.120604, 0.664915, 0.796865, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="FontVariation" id="FontVariation_k8txx"]
+fallbacks = Array[Font]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[sub_resource type="FontVariation" id="FontVariation_y3tg0"]
+base_font = SubResource("FontVariation_k8txx")
+spacing_glyph = 10
+spacing_space = 10
+spacing_top = 10
+spacing_bottom = 10
+
+[sub_resource type="Theme" id="Theme_70v5a"]
+default_font = SubResource("FontVariation_y3tg0")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3obr3"]
+
+[sub_resource type="FontFile" id="FontFile_y3tg0"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k42pf"]
+bg_color = Color(4.428029e-06, 0.8852718, 0.99018115, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0, 0.6, 0.99215686, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_ix6gb"]
+font_size = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73c3a"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8txx"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70v5a"]
+bg_color = Color(11.708403, 11.708403, 11.708403, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3obr3"]
+bg_color = Color(0.8891568, 0.4845425, 0.19657731, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.69624555, 0.3602821, 0.098657824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3tg0"]
+bg_color = Color(0.69567406, 0.3604483, 0.10751013, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8862745, 0.4862745, 0.19607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ix6gb"]
+bg_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.77477276, 0.023690943, 0.11126342, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2j2f"]
+bg_color = Color(0.675802, 0.018954432, 0.091600575, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_3obr3"]
+
+[node name="Nivel2" type="CanvasLayer"]
+script = ExtResource("1_73c3a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_opu0y")
+expand_mode = 1
+
+[node name="Tablita" type="Sprite2D" parent="."]
+position = Vector2(579, 437)
+scale = Vector2(0.515625, 0.38796297)
+texture = ExtResource("3_3obr3")
+
+[node name="Bruno" type="Sprite2D" parent="Tablita"]
+position = Vector2(607.51514, -286.10977)
+scale = Vector2(0.69246626, 0.78382784)
+texture = ExtResource("4_y3tg0")
+
+[node name="Tablita2" type="Sprite2D" parent="."]
+position = Vector2(581.00006, 576.9999)
+scale = Vector2(0.51197916, 0.19166666)
+texture = ExtResource("10_ix6gb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="Barra" type="ProgressBar" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_6t7mp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7n66j")
+step = 1.0
+
+[node name="ItemList" type="ItemList" parent="."]
+light_mask = 31
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.54
+anchor_right = 0.5
+anchor_bottom = 0.54
+offset_left = -24.0
+offset_top = 135.07999
+offset_right = 28.31195
+offset_bottom = 177.07999
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 12.18
+theme = SubResource("Theme_70v5a")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 80
+theme_override_constants/v_separation = 80
+theme_override_font_sizes/font_size = 50
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3obr3")
+allow_reselect = true
+auto_width = true
+auto_height = true
+text_overrun_behavior = 0
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = 15.0
+offset_right = 202.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.842014, 0.661922, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_y3tg0")
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_k42pf")
+text = "PALABRA"
+label_settings = SubResource("LabelSettings_ix6gb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="Button" parent="."]
+offset_left = 405.0
+offset_top = 86.0
+offset_right = 773.0
+offset_bottom = 330.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_73c3a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k8txx")
+
+[node name="ImagenPalabra" type="TextureRect" parent="."]
+offset_left = 469.0
+offset_top = 96.0
+offset_right = 711.0
+offset_bottom = 313.0
+expand_mode = 1
+
+[node name="Advertencia" type="Label" parent="."]
+clip_contents = true
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.883
+anchor_right = 0.499
+anchor_bottom = 0.883
+offset_left = -166.84802
+offset_top = 2.815979
+offset_right = 153.15198
+offset_bottom = 71.81598
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxFlat_70v5a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Felicidasde" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k8txx")
+volume_db = 24.0
+
+[node name="recchazo" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 2)
+stream = ExtResource("4_70v5a")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_3obr3")
+volume_db = 9.283
+
+[node name="correcct" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_b0ly4")
+
+[node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
+position = Vector2(53, 449.00003)
+scale = Vector2(0.6936398, 0.6805432)
+texture = ExtResource("5_k42pf")
+flip_h = true
+
+[node name="Minimizar" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 3.0
+offset_right = 1113.0
+offset_bottom = 37.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3obr3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y3tg0")
+text = "-"
+
+[node name="Cerrar" type="Button" parent="."]
+offset_left = 1115.0
+offset_top = 3.0
+offset_right = 1148.0
+offset_bottom = 36.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ix6gb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b2j2f")
+text = "x"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_3obr3")
+color = Color(0.847059, 0.286275, 0.733333, 0)
+
+[connection signal="item_clicked" from="ItemList" to="." method="_on_item_list_item_clicked"]
+[connection signal="pressed" from="Minimizar" to="." method="_on_minimizar_pressed"]
+[connection signal="pressed" from="Cerrar" to="." method="_on_cerrar_pressed"]

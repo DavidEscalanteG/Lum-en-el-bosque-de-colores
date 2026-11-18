@@ -1,0 +1,154 @@
+[gd_scene load_steps=15 format=3 uid="uid://c15ab1c3ggein"]
+
+[ext_resource type="Script" uid="uid://cqgm1tbjs0670" path="res://felicidades_4.gd" id="1_akbcu"]
+[ext_resource type="Texture2D" uid="uid://brtw2jusgsb1n" path="res://Scenes/pradera1.png" id="2_ehv7q"]
+[ext_resource type="Texture2D" uid="uid://h8w7oi7x6mww" path="res://Scenes/estrella_fel.png" id="3_4rjei"]
+[ext_resource type="AudioStream" uid="uid://iiq3vtuhconq" path="res://Scripts/fekicid.mp3" id="5_4rjei"]
+[ext_resource type="Texture2D" uid="uid://o63r4dq5qyln" path="res://Images/Lumi_Sprite1_Ojos.png" id="5_rj7et"]
+[ext_resource type="AudioStream" uid="uid://c2ckyfev31i2p" path="res://Images/SpotiDownloader.com - Aplausos, Ovaci+¦n - Limbo Project.mp3" id="6_6vqq0"]
+[ext_resource type="Texture2D" uid="uid://0yrlwbcrjt64" path="res://Images/Fondos/Mia.png" id="7_4rjei"]
+[ext_resource type="AudioStream" uid="uid://sj6hy38tl7pw" path="res://Sounds/Sonido-Burbuja.mp3" id="7_srf40"]
+
+[sub_resource type="SystemFont" id="SystemFont_if1gt"]
+font_italic = true
+font_weight = 500
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ysn4j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ptpjx"]
+bg_color = Color(0.305762, 0.703052, 0.246855, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 12
+border_color = Color(0.243526, 0.55583, 0.197336, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqcc8"]
+bg_color = Color(0.266667, 0.611765, 0.215686, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.305882, 0.701961, 0.247059, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udi1b"]
+bg_color = Color(0.798389, 0.542235, 3.85046e-07, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 12
+border_color = Color(0.549828, 0.366736, 3.85046e-07, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_571ow"]
+bg_color = Color(0.643137, 0.431373, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.541176, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Felicidades4" type="CanvasLayer"]
+script = ExtResource("1_akbcu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.615686)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ehv7q")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 2
+offset_left = 335.0
+offset_top = 76.0
+offset_right = 876.0
+offset_bottom = 192.0
+theme_type_variation = &"GraphNodeTitleLabel"
+theme_override_colors/font_color = Color(0.96931976, 0.5019674, 1.1551381e-06, 1)
+theme_override_colors/font_shadow_color = Color(0.223978, 0.162994, 0.00328018, 1)
+theme_override_colors/font_outline_color = Color(0, 0.254902, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_if1gt")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ysn4j")
+text = "FELICIDADES"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 612.0
+offset_top = 411.0
+offset_right = 866.0
+offset_bottom = 494.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ptpjx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dqcc8")
+text = "Siguiente"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 359.0
+offset_top = 410.0
+offset_right = 591.0
+offset_bottom = 487.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_udi1b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_571ow")
+text = "Mapa"
+
+[node name="EstrellaFel" type="Sprite2D" parent="."]
+position = Vector2(417, 293)
+scale = Vector2(0.555556, 0.519444)
+texture = ExtResource("3_4rjei")
+
+[node name="EstrellaFel2" type="Sprite2D" parent="."]
+position = Vector2(610, 294)
+scale = Vector2(0.555556, 0.519444)
+texture = ExtResource("3_4rjei")
+
+[node name="EstrellaFel3" type="Sprite2D" parent="."]
+position = Vector2(801, 294)
+scale = Vector2(0.555556, 0.519444)
+texture = ExtResource("3_4rjei")
+
+[node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
+position = Vector2(1124.0001, 495.99997)
+scale = Vector2(0.605164, 0.587378)
+texture = ExtResource("5_rj7et")
+
+[node name="sonido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_4rjei")
+
+[node name="burbuja" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_srf40")
+volume_db = 24.0
+
+[node name="Mia" type="Sprite2D" parent="."]
+position = Vector2(171.00003, 205)
+scale = Vector2(0.31391686, 0.30398485)
+texture = ExtResource("7_4rjei")
+flip_h = true
+
+[node name="sonido2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_6vqq0")
+volume_db = -8.238
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

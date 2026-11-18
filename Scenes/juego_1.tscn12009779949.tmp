@@ -1,0 +1,243 @@
+[gd_scene load_steps=19 format=3 uid="uid://duw1yw2u1c08g"]
+
+[ext_resource type="Script" uid="uid://bha8jt4m5wtu6" path="res://Scenes/juego_1.gd" id="1_matdt"]
+[ext_resource type="Texture2D" uid="uid://diuu7kw4ttbxf" path="res://Images/Fondos/Bosque.png" id="1_wyluc"]
+[ext_resource type="Texture2D" uid="uid://o63r4dq5qyln" path="res://Images/Lumi_Sprite1_Ojos.png" id="2_7fcs2"]
+[ext_resource type="Texture2D" uid="uid://bc6lr1hlqkgi0" path="res://Scenes/Llama.png" id="4_ujcmr"]
+[ext_resource type="Texture2D" uid="uid://bxsrtxihkhej6" path="res://Images/Engranaje.png" id="5_3r721"]
+[ext_resource type="AudioStream" uid="uid://cgym6pdgsyg84" path="res://Images/music fondo.mp3" id="6_6n1cu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fcs2"]
+bg_color = Color(0.0624739, 0.310982, 0.486406, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_matdt"]
+bg_color = Color(0.120604, 0.664915, 0.796865, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="FontVariation" id="FontVariation_ujcmr"]
+fallbacks = Array[Font]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[sub_resource type="FontVariation" id="FontVariation_matdt"]
+base_font = SubResource("FontVariation_ujcmr")
+spacing_glyph = 10
+spacing_space = 10
+spacing_top = 10
+spacing_bottom = 10
+
+[sub_resource type="Theme" id="Theme_ujcmr"]
+default_font = SubResource("FontVariation_matdt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujcmr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r721"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.588235, 0.211765, 0.305882, 0)
+border_color = Color(0.718872, 0.174994, 0.802799, 1)
+border_blend = true
+anti_aliasing_size = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n1cu"]
+bg_color = Color(0.993942, 0.91369, 0.511258, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.894118, 0.627451, 0.137255, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="FontFile" id="FontFile_ujcmr"]
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujcmr"]
+bg_color = Color(0.953058, 0.690004, 0.89483, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.729412, 0.396557, 0.689071, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_matdt"]
+font_size = 60
+
+[sub_resource type="Theme" id="Theme_3r721"]
+
+[node name="Juego1" type="CanvasLayer"]
+script = ExtResource("1_matdt")
+palabra_objetivo = "ÁRBOL"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wyluc")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="Barra" type="ProgressBar" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_7fcs2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_matdt")
+step = 1.0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -357.0
+offset_top = -439.0
+offset_right = 437.0
+offset_bottom = 684.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7fcs2")
+
+[node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1004, 492)
+scale = Vector2(0.573048, 0.611309)
+texture = ExtResource("2_7fcs2")
+
+[node name="ItemList" type="ItemList" parent="."]
+light_mask = 31
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.64
+anchor_right = 0.5
+anchor_bottom = 0.64
+offset_left = -69.0
+offset_top = -20.72
+offset_right = 77.0
+offset_bottom = 21.28
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 12.18
+theme = SubResource("Theme_ujcmr")
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/v_separation = 10
+theme_override_constants/line_separation = 10
+theme_override_constants/icon_margin = 10
+theme_override_constants/h_separation = 10
+theme_override_font_sizes/font_size = 55
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ujcmr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3r721")
+theme_override_styles/selected_focus = SubResource("StyleBoxFlat_6n1cu")
+allow_reselect = true
+auto_width = true
+auto_height = true
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -41.0
+offset_right = 202.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.842014, 0.661922, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_ujcmr")
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_ujcmr")
+text = "PALABRA"
+label_settings = SubResource("LabelSettings_matdt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_3r721")
+color = Color(0.847059, 0.286275, 0.733333, 0)
+
+[node name="Llama" type="Sprite2D" parent="."]
+position = Vector2(45, 453)
+scale = Vector2(0.5, 0.514025)
+texture = ExtResource("4_ujcmr")
+flip_h = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1106.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 57.0
+theme_override_font_sizes/font_size = 30
+text = "?"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 64.0
+offset_bottom = 59.0
+
+[node name="Engranaje" type="Sprite2D" parent="TextureButton"]
+position = Vector2(28, 36)
+scale = Vector2(0.206234, 0.204642)
+texture = ExtResource("5_3r721")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_6n1cu")
+volume_db = 24.0
+
+[connection signal="item_clicked" from="ItemList" to="." method="_on_item_list_item_clicked"]

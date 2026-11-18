@@ -1,0 +1,277 @@
+[gd_scene load_steps=26 format=3 uid="uid://dt87ngc8lie44"]
+
+[ext_resource type="Script" uid="uid://bayum508ic2t8" path="res://Animacion/Scripts_animacion/animacion_18.gd" id="1_nwk55"]
+[ext_resource type="Texture2D" uid="uid://dfjue0dd6n105" path="res://Animacion_imagenes/Libro16.png" id="2_01pta"]
+[ext_resource type="Texture2D" uid="uid://cuyjmjwii6a1t" path="res://Sprites_imagenes/Lumi_sin fondo/Sprites_Lumi.png" id="2_nwk55"]
+[ext_resource type="Texture2D" uid="uid://pw4bhged8wvn" path="res://Animacion/Mia_hablando.png" id="4_sy7rf"]
+[ext_resource type="AudioStream" uid="uid://8y0pf456u6hh" path="res://Animacion/Historia/H/His11.mp3" id="5_nwk55"]
+[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Música para Niños Prime.mp3" id="5_sy7rf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qklf"]
+atlas = ExtResource("2_nwk55")
+region = Rect2(0, 0, 432, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oaw3"]
+atlas = ExtResource("2_nwk55")
+region = Rect2(432, 0, 432, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_incyo"]
+atlas = ExtResource("2_nwk55")
+region = Rect2(864, 0, 432, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b45al"]
+atlas = ExtResource("2_nwk55")
+region = Rect2(1296, 0, 432, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exbau"]
+atlas = ExtResource("4_sy7rf")
+region = Rect2(0, 0, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t74ji"]
+atlas = ExtResource("4_sy7rf")
+region = Rect2(796, 0, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1l7t"]
+atlas = ExtResource("4_sy7rf")
+region = Rect2(0, 796, 796, 796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vcub"]
+atlas = ExtResource("4_sy7rf")
+region = Rect2(796, 796, 796, 796)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3b3r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qklf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3oaw3")
+}, {
+"duration": 30.0,
+"texture": SubResource("AtlasTexture_incyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b45al")
+}],
+"loop": true,
+"name": &"Lumi",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exbau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t74ji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1l7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vcub")
+}],
+"loop": true,
+"name": &"Luna",
+"speed": 6.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lvr7"]
+bg_color = Color(0.80186266, 0.10064397, 0.34170952, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.4739235, 0.0305644, 0.18773651, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6jwf"]
+bg_color = Color(0.62352943, 0.0627451, 0.25882354, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.101960786, 0.34117648, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmdkb"]
+bg_color = Color(0.11444888, 0.6971885, 0.81950736, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.05092234, 0.43963817, 0.5198159, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1crao"]
+bg_color = Color(0.09803922, 0.6313726, 0.7411765, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.11372549, 0.69803923, 0.81960785, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5offw"]
+bg_color = Color(0.8205008, 0.8141649, 0.0031404353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.87851596, 0.6212475, 0.21727729, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r70r1"]
+bg_color = Color(0.9607843, 0.6117647, 0.34117648, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.81960785, 0.8156863, 0.003921569, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydd8j"]
+bg_color = Color(0.8891568, 0.4845425, 0.19657731, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.69624555, 0.3602821, 0.098657824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8ifm"]
+bg_color = Color(0.69567406, 0.3604483, 0.10751013, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8862745, 0.4862745, 0.19607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epmys"]
+bg_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.77477276, 0.023690943, 0.11126342, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gahi2"]
+bg_color = Color(0.675802, 0.018954432, 0.091600575, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Animacion18" type="CanvasLayer"]
+script = ExtResource("1_nwk55")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_01pta")
+expand_mode = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Luna" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(839, 316.00003)
+scale = Vector2(0.44086593, 0.43928197)
+sprite_frames = SubResource("SpriteFrames_p3b3r")
+animation = &"Luna"
+
+[node name="Omitir" type="Button" parent="."]
+offset_left = 978.0
+offset_top = 39.0
+offset_right = 1126.0
+offset_bottom = 88.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2lvr7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q6jwf")
+text = "Omitir"
+
+[node name="Siguiente" type="Button" parent="."]
+offset_left = 967.0
+offset_top = 572.0
+offset_right = 1118.0
+offset_bottom = 622.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gmdkb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1crao")
+text = "Siguiente"
+
+[node name="Cuento" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_nwk55")
+
+[node name="Fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sy7rf")
+
+[node name="Volver" type="Button" parent="."]
+offset_left = 194.0
+offset_top = 508.0
+offset_right = 431.0
+offset_bottom = 556.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_5offw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r70r1")
+text = "Volver a escuchar"
+
+[node name="Minimizar" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 3.0
+offset_right = 1113.0
+offset_bottom = 37.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ydd8j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c8ifm")
+text = "-"
+
+[node name="Cerrar" type="Button" parent="."]
+offset_left = 1115.0
+offset_top = 3.0
+offset_right = 1148.0
+offset_bottom = 36.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_epmys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gahi2")
+text = "x"
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="Minimizar" to="." method="_on_minimizar_pressed"]
+[connection signal="pressed" from="Cerrar" to="." method="_on_cerrar_pressed"]

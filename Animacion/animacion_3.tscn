@@ -1,0 +1,264 @@
+[gd_scene load_steps=24 format=3 uid="uid://nae1vbvl42w1"]
+
+[ext_resource type="Script" uid="uid://bfyta10rhso7h" path="res://Animacion/Scripts_animacion/animacion_3.gd" id="1_pynv3"]
+[ext_resource type="Texture2D" uid="uid://medymj50yog6" path="res://Animacion_imagenes/Libro3.png" id="1_rioj5"]
+[ext_resource type="Texture2D" uid="uid://cuyjmjwii6a1t" path="res://Sprites_imagenes/Lumi_sin fondo/Sprites_Lumi.png" id="2_pynv3"]
+[ext_resource type="Texture2D" uid="uid://yg8u34mmdscl" path="res://Animacion/Luna_hablando.png" id="4_jsn22"]
+[ext_resource type="AudioStream" uid="uid://6cqbumymuc0" path="res://Animacion/Animacion_expliacaciones/ahorasi (1).mp3" id="5_jsn22"]
+[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Música para Niños Prime.mp3" id="6_jsn22"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qklf"]
+atlas = ExtResource("2_pynv3")
+region = Rect2(0, 0, 432, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oaw3"]
+atlas = ExtResource("2_pynv3")
+region = Rect2(432, 0, 432, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_incyo"]
+atlas = ExtResource("2_pynv3")
+region = Rect2(864, 0, 432, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b45al"]
+atlas = ExtResource("2_pynv3")
+region = Rect2(1296, 0, 432, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ona3"]
+atlas = ExtResource("4_jsn22")
+region = Rect2(947, 0, 947, 947)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pkbj"]
+atlas = ExtResource("4_jsn22")
+region = Rect2(1894, 0, 947, 947)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pkbj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qklf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3oaw3")
+}, {
+"duration": 30.0,
+"texture": SubResource("AtlasTexture_incyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b45al")
+}],
+"loop": true,
+"name": &"Lumi",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ona3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pkbj")
+}],
+"loop": true,
+"name": &"Luna",
+"speed": 6.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm0jd"]
+bg_color = Color(0.80186266, 0.10064397, 0.34170952, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.4739235, 0.0305644, 0.18773651, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3l0q"]
+bg_color = Color(0.62352943, 0.0627451, 0.25882354, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.101960786, 0.34117648, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6so5s"]
+bg_color = Color(0.11444888, 0.6971885, 0.81950736, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.05092234, 0.43963817, 0.5198159, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ho7j"]
+bg_color = Color(0.09803922, 0.6313726, 0.7411765, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.11372549, 0.69803923, 0.81960785, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ona3"]
+bg_color = Color(0.8205008, 0.8141649, 0.0031404353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.87851596, 0.6212475, 0.21727729, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pkbj"]
+bg_color = Color(0.9607843, 0.6117647, 0.34117648, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.81960785, 0.8156863, 0.003921569, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsn22"]
+bg_color = Color(0.8891568, 0.4845425, 0.19657731, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.69624555, 0.3602821, 0.098657824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l242p"]
+bg_color = Color(0.69567406, 0.3604483, 0.10751013, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8862745, 0.4862745, 0.19607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00dob"]
+bg_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.77477276, 0.023690943, 0.11126342, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqf2k"]
+bg_color = Color(0.675802, 0.018954432, 0.091600575, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Animacion3" type="CanvasLayer"]
+script = ExtResource("1_pynv3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rioj5")
+expand_mode = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Luna" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(335, 294)
+scale = Vector2(0.44086593, 0.43928197)
+sprite_frames = SubResource("SpriteFrames_3pkbj")
+animation = &"Luna"
+frame_progress = 0.85795987
+
+[node name="Omitir" type="Button" parent="."]
+offset_left = 978.0
+offset_top = 39.0
+offset_right = 1126.0
+offset_bottom = 88.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_bm0jd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q3l0q")
+text = "Omitir"
+
+[node name="Siguiente" type="Button" parent="."]
+offset_left = 967.0
+offset_top = 572.0
+offset_right = 1118.0
+offset_bottom = 622.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6so5s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ho7j")
+text = "Siguiente"
+
+[node name="Cuento" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_jsn22")
+
+[node name="Fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_jsn22")
+
+[node name="Volver" type="Button" parent="."]
+offset_left = 194.0
+offset_top = 508.0
+offset_right = 431.0
+offset_bottom = 556.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ona3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3pkbj")
+text = "Volver a escuchar"
+
+[node name="Minimizar" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 3.0
+offset_right = 1113.0
+offset_bottom = 37.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsn22")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l242p")
+text = "-"
+
+[node name="Cerrar" type="Button" parent="."]
+offset_left = 1115.0
+offset_top = 3.0
+offset_right = 1148.0
+offset_bottom = 36.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_00dob")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sqf2k")
+text = "x"
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="Minimizar" to="." method="_on_minimizar_pressed"]
+[connection signal="pressed" from="Cerrar" to="." method="_on_cerrar_pressed"]

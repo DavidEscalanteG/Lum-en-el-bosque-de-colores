@@ -1,0 +1,256 @@
+[gd_scene load_steps=19 format=3 uid="uid://cdu8b4w65v2md"]
+
+[ext_resource type="Script" uid="uid://jtoydy15kgsn" path="res://nivel_4.gd" id="1_hnomi"]
+[ext_resource type="Texture2D" uid="uid://bb2yk1hw6pskd" path="res://Images/Fondos/Pradera.png" id="1_r3ujc"]
+[ext_resource type="Texture2D" uid="uid://be4smd1siyyh7" path="res://Images/Fondos/libro2.png" id="2_hnomi"]
+[ext_resource type="Texture2D" uid="uid://0yrlwbcrjt64" path="res://Images/Fondos/Mia.png" id="3_ftgm6"]
+[ext_resource type="Texture2D" uid="uid://o63r4dq5qyln" path="res://Images/Lumi_Sprite1_Ojos.png" id="4_pk2ow"]
+[ext_resource type="AudioStream" uid="uid://c2ckyfev31i2p" path="res://Images/SpotiDownloader.com - Aplausos, Ovaci+¦n - Limbo Project.mp3" id="6_fxqjy"]
+[ext_resource type="AudioStream" uid="uid://c88ra088dfnoq" path="res://Images/rechazo.mp3" id="7_vde86"]
+[ext_resource type="AudioStream" uid="uid://cqr5bkcywioit" path="res://aUDIOAAA.mp3" id="8_fxqjy"]
+[ext_resource type="AudioStream" uid="uid://brqtar1y2lpho" path="res://Images/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3" id="9_2xuwu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyiev"]
+bg_color = Color(0.0624739, 0.310982, 0.486406, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifv18"]
+bg_color = Color(0.120604, 0.664915, 0.796865, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fxqjy"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_my7bp"]
+bg_color = Color(11.708403, 11.708403, 11.708403, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxqjy"]
+bg_color = Color(0.8891568, 0.4845425, 0.19657731, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.69624555, 0.3602821, 0.098657824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vde86"]
+bg_color = Color(0.69567406, 0.3604483, 0.10751013, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8862745, 0.4862745, 0.19607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5igt6"]
+bg_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.77477276, 0.023690943, 0.11126342, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xuwu"]
+bg_color = Color(0.675802, 0.018954432, 0.091600575, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9647059, 0.05490196, 0.15294118, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_fxqjy"]
+
+[node name="Nivel4" type="CanvasLayer"]
+script = ExtResource("1_hnomi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("1_r3ujc")
+expand_mode = 1
+
+[node name="Libro2" type="Sprite2D" parent="."]
+position = Vector2(601, 361)
+scale = Vector2(0.60520834, 0.5472222)
+texture = ExtResource("2_hnomi")
+
+[node name="Mia" type="Sprite2D" parent="."]
+position = Vector2(1000, 241.99997)
+scale = Vector2(0.37405542, 0.36464825)
+texture = ExtResource("3_ftgm6")
+
+[node name="Mia" type="Sprite2D" parent="Mia"]
+position = Vector2(1000, 241.99997)
+scale = Vector2(0.37405542, 0.36464825)
+texture = ExtResource("3_ftgm6")
+
+[node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
+position = Vector2(66, 493)
+scale = Vector2(0.5925694, 0.611309)
+texture = ExtResource("4_pk2ow")
+flip_h = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="Barra" type="ProgressBar" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_yyiev")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ifv18")
+step = 1.0
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 653.0
+offset_top = 163.0
+offset_right = 852.0
+offset_bottom = 396.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.63529414, 0.03137255, 0, 1)
+theme_override_colors/font_hovered_color = Color(0.24683475, 0.29282683, 1, 1)
+theme_override_colors/font_hovered_selected_color = Color(0.27518654, 5.7949423e-05, 0.99627143, 1)
+theme_override_colors/font_selected_color = Color(0.04994168, 0.42065167, 0.46085566, 1)
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+theme_override_font_sizes/font_size = 35
+theme_override_styles/panel = SubResource("StyleBoxTexture_fxqjy")
+allow_reselect = true
+auto_height = true
+text_overrun_behavior = 0
+same_column_width = true
+
+[node name="ImagenOracion" type="TextureRect" parent="."]
+offset_left = 325.0
+offset_top = 188.0
+offset_right = 567.0
+offset_bottom = 405.0
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 318.0
+offset_top = 405.0
+offset_right = 554.0
+offset_bottom = 544.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Oración"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Advertencia" type="Label" parent="."]
+clip_contents = true
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.883
+anchor_right = 0.499
+anchor_bottom = 0.883
+offset_left = -166.84802
+offset_top = 2.815979
+offset_right = 153.15198
+offset_bottom = 71.81598
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxFlat_my7bp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LumiSprite1Ojos2" type="Sprite2D" parent="."]
+position = Vector2(58, 483)
+scale = Vector2(0.62657446, 0.611309)
+texture = ExtResource("4_pk2ow")
+flip_h = true
+
+[node name="Felicidasde" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_fxqjy")
+volume_db = 24.0
+
+[node name="recchazo" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 2)
+stream = ExtResource("7_vde86")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_fxqjy")
+volume_db = 9.283
+
+[node name="correcct" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_2xuwu")
+
+[node name="Minimizar" type="Button" parent="."]
+offset_left = 1078.0
+offset_top = 3.0
+offset_right = 1113.0
+offset_bottom = 37.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxqjy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vde86")
+text = "-"
+
+[node name="Cerrar" type="Button" parent="."]
+offset_left = 1115.0
+offset_top = 3.0
+offset_right = 1148.0
+offset_bottom = 36.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5igt6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2xuwu")
+text = "x"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 2.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_fxqjy")
+color = Color(0.847059, 0.286275, 0.733333, 0)
+
+[connection signal="item_clicked" from="ItemList" to="." method="_on_item_list_item_clicked"]
+[connection signal="pressed" from="Minimizar" to="." method="_on_minimizar_pressed"]
+[connection signal="pressed" from="Cerrar" to="." method="_on_cerrar_pressed"]

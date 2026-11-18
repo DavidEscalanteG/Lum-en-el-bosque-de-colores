@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqgbf24km4vgk"]
+
+[ext_resource type="Script" uid="uid://cqyq7ndkkrf70" path="res://desbloquear_nivel_2.gd" id="1_rhn08"]
+[ext_resource type="Texture2D" uid="uid://b1iuj01087vg3" path="res://Scenes/Desbloqueado2.png" id="2_lxr1n"]
+[ext_resource type="Texture2D" uid="uid://o63r4dq5qyln" path="res://Images/Lumi_Sprite1_Ojos.png" id="2_rhn08"]
+[ext_resource type="Texture2D" uid="uid://haujf50juq8n" path="res://Scenes/tablita2.png" id="3_lxr1n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1wbe"]
+bg_color = Color(0.0624739, 0.310982, 0.486406, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifgv6"]
+bg_color = Color(0.120604, 0.664915, 0.796865, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Desbloquear nivel 2" type="CanvasLayer"]
+script = ExtResource("1_rhn08")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.615686)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lxr1n")
+expand_mode = 1
+
+[node name="Barra" type="ProgressBar" parent="."]
+offset_left = 59.0
+offset_top = 557.0
+offset_right = 1103.0
+offset_bottom = 586.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_h1wbe")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ifgv6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.13
+autostart = true
+
+[node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
+position = Vector2(588, 403)
+scale = Vector2(0.417506, 0.387578)
+texture = ExtResource("2_rhn08")
+
+[node name="Tablita2" type="Sprite2D" parent="."]
+position = Vector2(589.0001, 87)
+scale = Vector2(0.52135414, 0.2962963)
+texture = ExtResource("3_lxr1n")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 238.0
+offset_top = 85.0
+offset_right = 981.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0.25312063, 0.24170771, 1)
+theme_override_colors/font_outline_color = Color(0.8507999, 0.83017707, 7.70092e-07, 1)
+theme_override_font_sizes/font_size = 45
+text = "Has desbloqueado un nuevo nivel "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

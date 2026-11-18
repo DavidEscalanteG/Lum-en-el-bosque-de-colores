@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6y1iqgf06w8x"]
+
+[ext_resource type="Script" uid="uid://qf6h2yb5r0ql" path="res://nivel_3.gd" id="1_iukwk"]
+[ext_resource type="Texture2D" uid="uid://bdktqfjih4857" path="res://Scenes/Cascada.png" id="1_lmouq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmouq"]
+bg_color = Color(0, 0.70610124, 0.5219598, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(5.5350364e-07, 0.36985338, 0.26693827, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iukwk"]
+bg_color = Color(0, 0.43137255, 0.3137255, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Nivel3" type="CanvasLayer"]
+script = ExtResource("1_iukwk")
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("1_lmouq")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 104.0
+offset_top = 86.0
+offset_right = 144.0
+offset_bottom = 126.0
+
+[node name="ContenedorMemoria" type="VBoxContainer" parent="."]
+offset_left = 367.0
+offset_top = 190.0
+offset_right = 407.0
+offset_bottom = 230.0
+
+[node name="PalabraMostrar" type="Label" parent="ContenedorMemoria"]
+layout_mode = 2
+
+[node name="ImagenMostrar" type="TextureRect" parent="ContenedorMemoria"]
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 1
+stretch_mode = 3
+
+[node name="ContenedorPregunta" type="VBoxContainer" parent="."]
+offset_left = 592.0
+offset_top = 202.0
+offset_right = 632.0
+offset_bottom = 252.0
+
+[node name="PreguntaLabel" type="Label" parent="ContenedorPregunta"]
+layout_mode = 2
+
+[node name="PalabraPregunta" type="Label" parent="ContenedorPregunta"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 468.0
+offset_top = 422.0
+offset_right = 859.0
+offset_bottom = 462.0
+
+[node name="BotonVerdadero" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Verdadero"
+
+[node name="BotonFalso" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Falso"
+
+[node name="Retroalimentación" type="Label" parent="."]
+offset_left = 146.0
+offset_top = 357.0
+offset_right = 186.0
+offset_bottom = 380.0
+
+[node name="TimerMemoria" type="Timer" parent="."]
+
+[node name="TimerRonda" type="Timer" parent="."]
+
+[node name="Siguiente" type="Button" parent="."]
+offset_left = 464.0
+offset_top = 569.0
+offset_right = 690.0
+offset_bottom = 634.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_lmouq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iukwk")
+text = "Siguiente"
+
+[connection signal="timeout" from="TimerMemoria" to="." method="_on_timer_memoria_timeout"]
+[connection signal="timeout" from="TimerRonda" to="." method="_on_timer_ronda_timeout"]

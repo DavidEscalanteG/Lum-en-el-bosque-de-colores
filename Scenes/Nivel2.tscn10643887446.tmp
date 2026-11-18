@@ -1,0 +1,242 @@
+[gd_scene load_steps=17 format=3 uid="uid://de3wn1lhw18x3"]
+
+[ext_resource type="Script" uid="uid://bs2yb84aeww2b" path="res://Scenes/nivel_2.gd" id="1_73c3a"]
+[ext_resource type="Texture2D" uid="uid://2bjkobgesm8g" path="res://Images/Fondos/Rio.png" id="1_opu0y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6t7mp"]
+bg_color = Color(0.0624739, 0.310982, 0.486406, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7n66j"]
+bg_color = Color(0.120604, 0.664915, 0.796865, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="FontVariation" id="FontVariation_k8txx"]
+fallbacks = Array[Font]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[sub_resource type="FontVariation" id="FontVariation_matdt"]
+base_font = SubResource("FontVariation_k8txx")
+spacing_glyph = 10
+spacing_space = 10
+spacing_top = 10
+spacing_bottom = 10
+
+[sub_resource type="Theme" id="Theme_70v5a"]
+default_font = SubResource("FontVariation_matdt")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03gfn"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.588235, 0.211765, 0.305882, 0)
+border_color = Color(0.718872, 0.174994, 0.802799, 1)
+border_blend = true
+anti_aliasing_size = 8.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b0ly4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3obr3"]
+bg_color = Color(0.993942, 0.91369, 0.511258, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.894118, 0.627451, 0.137255, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="FontFile" id="FontFile_y3tg0"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k42pf"]
+bg_color = Color(0.953058, 0.690004, 0.89483, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.729412, 0.396557, 0.689071, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_ix6gb"]
+font_size = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73c3a"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8txx"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70v5a"]
+bg_color = Color(11.708403, 11.708403, 11.708403, 0)
+
+[node name="Nivel2" type="CanvasLayer"]
+script = ExtResource("1_73c3a")
+palabra_objetivo = null
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_opu0y")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="Barra" type="ProgressBar" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_6t7mp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7n66j")
+step = 1.0
+
+[node name="ItemList" type="ItemList" parent="."]
+light_mask = 31
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.54
+anchor_right = 0.5
+anchor_bottom = 0.54
+offset_left = -24.47998
+offset_top = 120.75998
+offset_right = 27.83197
+offset_bottom = 162.75998
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 12.18
+theme = SubResource("Theme_70v5a")
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 0, 1)
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+theme_override_constants/outline_size = 10
+theme_override_constants/line_separation = 10
+theme_override_constants/icon_margin = 10
+theme_override_font_sizes/font_size = 55
+theme_override_styles/panel = SubResource("StyleBoxFlat_03gfn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b0ly4")
+theme_override_styles/selected_focus = SubResource("StyleBoxFlat_3obr3")
+allow_reselect = true
+auto_width = true
+auto_height = true
+text_overrun_behavior = 0
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = 15.0
+offset_right = 202.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.842014, 0.661922, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_y3tg0")
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_k42pf")
+text = "PALABRA"
+label_settings = SubResource("LabelSettings_ix6gb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="Button" parent="."]
+offset_left = 405.0
+offset_top = 86.0
+offset_right = 773.0
+offset_bottom = 330.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_73c3a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k8txx")
+
+[node name="ImagenPalabra" type="TextureRect" parent="."]
+offset_left = 469.0
+offset_top = 96.0
+offset_right = 711.0
+offset_bottom = 313.0
+expand_mode = 1
+
+[node name="Advertencia" type="Label" parent="."]
+clip_contents = true
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.883
+anchor_right = 0.499
+anchor_bottom = 0.883
+offset_left = -166.84802
+offset_top = -11.184021
+offset_right = 153.15198
+offset_bottom = 57.81598
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.004899827, 0.004899827, 0.004899827, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_70v5a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="item_clicked" from="ItemList" to="." method="_on_item_list_item_clicked"]

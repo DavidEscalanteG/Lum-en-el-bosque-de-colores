@@ -1,0 +1,221 @@
+[gd_scene load_steps=12 format=3 uid="uid://c6y1iqgf06w8x"]
+
+[ext_resource type="Script" uid="uid://qf6h2yb5r0ql" path="res://nivel_3.gd" id="1_iukwk"]
+[ext_resource type="Texture2D" uid="uid://bdktqfjih4857" path="res://Scenes/Cascada.png" id="1_lmouq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1col5"]
+bg_color = Color(0.14117648, 0.49019608, 0.8117647, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.029135734, 0.2243951, 0.39748418, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sfkl1"]
+bg_color = Color(0.6460708, 0.6172264, 0.15623066, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.53771514, 0.51135015, 0.1261524, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jc6x"]
+bg_color = Color(0.23529412, 0.78431374, 0.36078432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.16574141, 0.5340404, 0.2453121, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_foow7"]
+bg_color = Color(0.16862746, 0.54509807, 0.2509804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol0td"]
+bg_color = Color(1, 0.15294118, 0.34117648, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.6960884, 0, 0.2082215, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ai75a"]
+bg_color = Color(0.69803923, 0, 0.20784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmouq"]
+bg_color = Color(0, 0.70610124, 0.5219598, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(5.5350364e-07, 0.36985338, 0.26693827, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iukwk"]
+bg_color = Color(0, 0.43137255, 0.3137255, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Theme" id="Theme_iukwk"]
+
+[node name="Nivel3" type="CanvasLayer"]
+script = ExtResource("1_iukwk")
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 651.0
+texture = ExtResource("1_lmouq")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ContenedorMemoria" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -54.5
+offset_right = 173.0
+offset_bottom = 172.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.88
+alignment = 1
+
+[node name="PalabraMostrar" type="Label" parent="ContenedorMemoria"]
+layout_mode = 2
+
+[node name="ImagenMostrar" type="TextureRect" parent="ContenedorMemoria"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 1
+stretch_mode = 3
+
+[node name="ContenedorPregunta" type="VBoxContainer" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 210.0
+offset_top = -217.0
+offset_right = -158.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+
+[node name="PreguntaLabel" type="Label" parent="ContenedorPregunta"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_1col5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PalabraPregunta" type="Label" parent="ContenedorPregunta"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 9.35
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_sfkl1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 281.0
+offset_top = 422.0
+offset_right = 926.0
+offset_bottom = 545.0
+
+[node name="BotonVerdadero" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.42
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_5jc6x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_foow7")
+text = "Verdadero"
+
+[node name="BotonFalso" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.42
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_ol0td")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ai75a")
+text = "Falso"
+
+[node name="Retroalimentación" type="Label" parent="."]
+offset_left = 146.0
+offset_top = 357.0
+offset_right = 186.0
+offset_bottom = 380.0
+
+[node name="TimerMemoria" type="Timer" parent="."]
+
+[node name="TimerRonda" type="Timer" parent="."]
+
+[node name="Siguiente" type="Button" parent="."]
+offset_left = 489.0
+offset_top = 570.0
+offset_right = 715.0
+offset_bottom = 635.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_lmouq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iukwk")
+text = "Siguiente"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_iukwk")
+color = Color(0.847059, 0.286275, 0.733333, 0)
+
+[connection signal="timeout" from="TimerMemoria" to="." method="_on_timer_memoria_timeout"]
+[connection signal="timeout" from="TimerRonda" to="." method="_on_timer_ronda_timeout"]

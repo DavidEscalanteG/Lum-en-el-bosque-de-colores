@@ -1,0 +1,358 @@
+[gd_scene load_steps=10 format=3 uid="uid://dp3dc2jfmr5w6"]
+
+[ext_resource type="Texture2D" uid="uid://cjfjnow8cfqwd" path="res://Images/Fondos/Lumi_Sprite1_Ojos.png" id="1_7flbs"]
+[ext_resource type="Script" uid="uid://cfxj4c4vf4ggh" path="res://creditos.gd" id="1_alf7g"]
+[ext_resource type="Script" uid="uid://d2qys2amhb7j2" path="res://scroll_container.gd" id="1_ilafw"]
+[ext_resource type="AudioStream" uid="uid://cawbbo62sek0d" path="res://Scripts/Sonido-Burbuja.mp3" id="4_3rtis"]
+
+[sub_resource type="Gradient" id="Gradient_l88cm"]
+colors = PackedColorArray(0.5298844, 0.6619469, 1, 1, 0.06953221, 0.29781523, 0.8004365, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ilafw"]
+gradient = SubResource("Gradient_l88cm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l88cm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilafw"]
+bg_color = Color(0.67278475, 0.6091451, 0.0507024, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0.49693716, 0.44940096, 0.031934947, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7flbs"]
+bg_color = Color(0.49803922, 0.4509804, 0.03137255, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Creditos" type="CanvasLayer"]
+script = ExtResource("1_alf7g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ilafw")
+
+[node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
+position = Vector2(93, 533)
+scale = Vector2(0.53841317, 0.50823694)
+texture = ExtResource("1_7flbs")
+flip_h = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = -1
+anchor_right = 0.957
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 35.0
+offset_right = 34.53601
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l88cm")
+draw_focus_border = true
+script = ExtResource("1_ilafw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Créditos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+theme_override_font_sizes/font_size = 30
+text = "Nombre del juego: Las aventuras de Lumi en el bosque de 
+colores"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.30910283, 0.33881527, 0.3128397, 1)
+theme_override_font_sizes/font_size = 30
+text = "Versión:1.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.11673444, 0.09928066, 0.36355406, 1)
+theme_override_font_sizes/font_size = 30
+text = "Desarrollo y diseño:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.11673444, 0.09928066, 0.36355406, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label15" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.15700355, 0.13299546, 0.09938798, 1)
+theme_override_font_sizes/font_size = 30
+text = "Programadores"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+theme_override_font_sizes/font_size = 30
+text = "Miguel Angel Gómez Herguera
+Roger Jesús Aguilar Uicab"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label14" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label16" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.15700355, 0.13299546, 0.09938798, 1)
+theme_override_font_sizes/font_size = 30
+text = "Arte y animación"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label13" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+theme_override_font_sizes/font_size = 30
+text = "Miguel Angel Gómez Herguera"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label18" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label19" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.15686275, 0.13333334, 0.09803922, 1)
+theme_override_font_sizes/font_size = 30
+text = "Música y sonido"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label21" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+theme_override_font_sizes/font_size = 30
+text = "Roger Jesus Aguilar Uicab"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label23" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label30" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.15700355, 0.13299546, 0.09938798, 1)
+theme_override_font_sizes/font_size = 30
+text = "Voces"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label31" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+theme_override_font_sizes/font_size = 30
+text = "LE. Rosa Isela Noh Perez------Narrador
+Israel Moises  Pech May------------Lumi
+Ariadne Beatriz Pech Quijano----Luna
+Kevin Leandro Camelo Suaste----Bruno
+William Enrique Caamal Caamal---- Tilo
+Yuliana Sarai Aban Chuc- ----------Mia
+Cristobal Eduardo Gonzalez Diaz-----Nico
+
+Otras voces 
+Faraon Michael Kuyoc Herrera----Narrador"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label29" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label22" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.15700355, 0.13299546, 0.09938798, 1)
+theme_override_font_sizes/font_size = 30
+text = "Narrativo y Storyboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label24" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+theme_override_font_sizes/font_size = 30
+text = "Miguel Angel Gómez Herguera
+Roger Jesús Aguilar Uicab"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label25" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.15700355, 0.13299546, 0.09938798, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label26" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.15700355, 0.13299546, 0.09938798, 1)
+theme_override_font_sizes/font_size = 30
+text = "Revisión pedagógica"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label27" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+theme_override_font_sizes/font_size = 30
+text = "Dr. Carlos Andrés Miranda Palma
+Dra. Lizzie Edmea Narváez Díaz"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label17" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.30910283, 0.33881527, 0.3128397, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label20" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.5972251, 0.106755234, 0.17440343, 1)
+theme_override_font_sizes/font_size = 30
+text = "Licencias y Recursos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label28" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+theme_override_font_sizes/font_size = 30
+text = "Este videojuego fue desarrollado en Godot 
+Engine 4.5.
+
+Inspirado en \"Elmer, el elefante de Colores\" de 
+David Mckee.
+
+Este juego toma inspiración en la escencia de Elmer,
+promoviendo la diversividad, creatividad y el
+aprendizaje de manera creativa
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(-1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.4
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_ilafw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7flbs")
+text = "Regresar"
+icon_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3rtis")
+volume_db = 24.0
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Label6" to="." method="_on_label_6_pressed"]

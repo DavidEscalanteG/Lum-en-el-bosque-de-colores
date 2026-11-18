@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brqtar1y2lpho"
+path="res://.godot/imported/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3-71806e1c02de0d657bb5f124c192f0ca.mp3str"
+
+[deps]
+
+source_file="res://Images/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3"
+dest_files=["res://.godot/imported/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3-71806e1c02de0d657bb5f124c192f0ca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

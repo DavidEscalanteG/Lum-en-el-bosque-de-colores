@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=3 uid="uid://dq01pjcslx11p"]
+
+[ext_resource type="Script" uid="uid://bucgu2vx6ojhc" path="res://celebracion.gd" id="1_tbmgi"]
+[ext_resource type="VideoStream" uid="uid://sta4li3uhs40" path="res://celebracion3.ogv" id="2_vui83"]
+[ext_resource type="Texture2D" uid="uid://cgqm30ibwpacl" path="res://finalcelebracion.png" id="3_t267j"]
+[ext_resource type="AudioStream" uid="uid://htg4chn4y2eb" path="res://austismo.mp3" id="4_xm44b"]
+[ext_resource type="AudioStream" uid="uid://u7hy4demmdx5" path="res://Animacion/Historia/H/His15.mp3" id="5_vui83"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xm44b"]
+bg_color = Color(0.54509807, 0.827451, 0.9647059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqiwy"]
+bg_color = Color(0.54509807, 0.827451, 0.9647059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1lok"]
+bg_color = Color(0.54509807, 0.827451, 0.9647059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t267j"]
+bg_color = Color(0.1845758, 0.61497134, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+border_color = Color(0, 0.43220663, 0.74986786, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vui83"]
+bg_color = Color(0, 0.43137255, 0.7490196, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Celebracion" type="CanvasLayer"]
+script = ExtResource("1_tbmgi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_vui83")
+autoplay = true
+loop = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 960.0
+offset_right = 1153.0
+offset_bottom = 52.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xm44b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wqiwy")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1126.0
+offset_top = 24.0
+offset_right = 1319.0
+offset_bottom = 76.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xm44b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r1lok")
+
+[node name="Finalcelebracion" type="Sprite2D" parent="."]
+position = Vector2(483, -683)
+texture = ExtResource("3_t267j")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 222.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_t267j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vui83")
+text = "Salir"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xm44b")
+
+[node name="Cuento" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vui83")
+
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

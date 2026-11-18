@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://e0pk707jvgdh"]
+
+[ext_resource type="Script" uid="uid://byyh5vx7dycae" path="res://Scripts/inicio.gd" id="1_47xpm"]
+[ext_resource type="Texture2D" uid="uid://bbi8jds8c8ajt" path="res://Images/Fondo juego lumi.png" id="2_dcnhq"]
+[ext_resource type="Texture2D" uid="uid://dluvuoe7huje6" path="res://Scenes/Logo_FINAL.png" id="3_47xpm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8a4r"]
+bg_color = Color(0, 0.290196, 0.490196, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xagyt"]
+bg_color = Color(0.0705882, 0.623529, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Inicio" type="CanvasLayer"]
+script = ExtResource("1_47xpm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dcnhq")
+expand_mode = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 68.0
+offset_top = 553.0
+offset_right = 1096.0
+offset_bottom = 580.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_x8a4r")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xagyt")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(577, 267)
+scale = Vector2(0.441406, 0.409491)
+texture = ExtResource("3_47xpm")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7i24kh8g5bba"
+path="res://.godot/imported/WhatsApp Audio 2026-03-18 at 11.06.15 PM.ogg-065c7ffa9f9fb2caad4bf1e4e8c7316a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Animacion/Historia/H/WhatsApp Audio 2026-03-18 at 11.06.15 PM.ogg"
+dest_files=["res://.godot/imported/WhatsApp Audio 2026-03-18 at 11.06.15 PM.ogg-065c7ffa9f9fb2caad4bf1e4e8c7316a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
