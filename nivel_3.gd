@@ -55,9 +55,14 @@ var max_rondas = 15
 
 # >>> CONTADOR DE CORRECTAS <<<
 var correctas = 0
+var respuesta_registrada := false
 
 
 func _ready():
+	var guardado := Partidas.obtener_actividad(3)
+	rondas = clampi(int(guardado.get("rondas", 0)), 0, max_rondas)
+	correctas = clampi(int(guardado.get("correctas", 0)), 0, rondas)
+	indice_imagen = clampi(int(guardado.get("indice_imagen", 0)), 0, palabras.size())
 	$AudioStreamPlayer2D.play()
 
 	timer_memoria.timeout.connect(_on_TimerMemoria_timeout)
@@ -80,7 +85,8 @@ func _ready():
 
 
 func iniciar_nueva_ronda():
-	if indice_imagen >= palabras.size():
+	respuesta_registrada = false
+	if indice_imagen >= palabras.size() or rondas >= max_rondas:
 		cambiar_a_resultados()
 		return
 
@@ -138,6 +144,9 @@ func generar_pregunta():
 
 
 func _on_respuesta(valor_usuario: bool):
+	if respuesta_registrada:
+		return
+	respuesta_registrada = true
 	boton_verdadero.disabled = true
 	boton_falso.disabled = true
 
@@ -161,11 +170,14 @@ func _on_respuesta(valor_usuario: bool):
 		$recchazo.play()
 		tween.tween_property(color_fondo, "color", Color(1, 0, 0, 0.7), 0.1)
 
+	Partidas.guardar_actividad(3, {"rondas": rondas + 1, "correctas": correctas, "indice_imagen": indice_imagen})
 	tween.tween_interval(0.5)
 	tween.tween_property(color_fondo, "color", Color(1, 1, 1, 0), 0.1)
 
 
 func _on_siguiente():
+	if not respuesta_registrada:
+		return
 	rondas += 1
 
 	if rondas >= max_rondas:
@@ -176,16 +188,9 @@ func _on_siguiente():
 
 # >>> INSTANCIAR ESCENA DE RESULTADOS RECICLADA <<<
 func cambiar_a_resultados():
-	# Instancia resultados
-	var escena_resultados = preload("res://resultados_2.tscn").instantiate()
-	get_tree().root.add_child(escena_resultados)
-
-	# Elimina la escena de juego
-	queue_free()
-
-	# Pasa resultados
-	if escena_resultados.has_method("set_resultado"):
-		escena_resultados.set_resultado(correctas)
+	Partidas.guardar_actividad(3, {"rondas": rondas, "correctas": correctas, "indice_imagen": indice_imagen})
+	Partidas.guardar_punto("res://resultados_2.tscn")
+	get_tree().change_scene_to_file("res://resultados_2.tscn")
 
 
 func _on_cerrar_pressed() -> void:

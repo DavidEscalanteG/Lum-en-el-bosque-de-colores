@@ -12,6 +12,7 @@ var silabas_objetivo: Array = []
 var pos = 0
 var errores_actual = 0
 var silabas_totales: Array = []
+var actividad_terminada := false
 
 # --- Preparar palabra ---
 func preparar_palabra():
@@ -70,7 +71,10 @@ func _ready() -> void:
 		Global.lista_silabas_seleccionada = true
 
 	# Control de palabras fallidas o nuevas
-	if Global.ultima_palabra_fallida_silabas != "":
+	var pendiente := Partidas.obtener_actividad(2)
+	if pendiente.has("palabra"):
+		palabra_objetivo = pendiente.palabra
+	elif Global.ultima_palabra_fallida_silabas != "":
 		palabra_objetivo = Global.ultima_palabra_fallida_silabas
 		Global.ultima_palabra_fallida_silabas = ""
 	else:
@@ -80,10 +84,13 @@ func _ready() -> void:
 		get_tree().change_scene_to_file("res://felicidades_nivel_2.tscn")
 		return
 
+	Partidas.guardar_actividad(2, {"palabra": palabra_objetivo})
 	preparar_palabra()
 
 # --- Clic en sílaba ---
 func _on_item_list_item_clicked(index: int, _at_position: Vector2, _mouse_button_index: int) -> void:
+	if actividad_terminada or items.is_item_disabled(index):
+		return
 	var silaba = items.get_item_text(index)
 	if silaba == silabas_objetivo[pos]:
 		items.set_item_disabled(index, true)
@@ -104,7 +111,13 @@ func correcto() -> void:
 	barra.value += 1
 
 	if pos == silabas_objetivo.size() - 1:
+		actividad_terminada = true
 		Global.palabras_completadas_silabas += 1
+		Global.ultima_palabra_fallida_silabas = ""
+		Partidas.limpiar_actividad(2)
+		if Global.palabras_completadas_silabas >= Global.lista_actual_silabas.size():
+			Partidas.completar_capitulo(2)
+		Partidas.guardar_punto("res://felicidades_nivel_2.tscn")
 		errores_actual = 0
 		await get_tree().create_timer(0.5).timeout
 		if has_node("Felicidasde"): $Felicidasde.play()

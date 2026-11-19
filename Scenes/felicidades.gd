@@ -9,6 +9,7 @@ func _on_button_pressed() -> void:
 	
 	# Si completaste 10 palabras y estás en nivel 1 → pasar al nivel 2
 	if Global.palabras_completadas >= 10 and Global.nivel == 1:
+		Partidas.completar_capitulo(1)
 		Global.nivel = 2
 		Global.ronda = 0
 		Global.palabras_completadas = 0

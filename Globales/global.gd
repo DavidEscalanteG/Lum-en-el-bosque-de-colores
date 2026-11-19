@@ -1,5 +1,65 @@
 extends Node
 
+const CAMPOS_NUMERICOS := ["ronda", "ronda1", "nivel", "palabras_completadas", "errores_actual", "palabras_completadas_silabas", "oraciones_completadas"]
+const CAMPOS_LISTAS := ["lista_actual", "lista_actual_silabas", "palabras_usadas_silabas", "lista_actual_oraciones", "oraciones_usadas"]
+const CAMPOS_TEXTO := ["ultima_palabra_fallida", "ultima_palabra_fallida_silabas", "ultima_oracion_fallida"]
+
+func serializar_estado() -> Dictionary:
+	var estado: Dictionary = {}
+	for campo in CAMPOS_NUMERICOS + CAMPOS_TEXTO:
+		estado[campo] = get(campo)
+	for campo in CAMPOS_LISTAS:
+		estado[campo] = get(campo).duplicate(true)
+	estado["lista_silabas_seleccionada"] = lista_silabas_seleccionada
+	return estado
+
+func restaurar_estado(estado: Dictionary) -> void:
+	for campo in CAMPOS_NUMERICOS:
+		var valor: Variant = estado.get(campo, 1 if campo == "nivel" else 0)
+		if valor is float or valor is int:
+			set(campo, clampi(int(valor), 1, 5) if campo == "nivel" else maxi(0, int(valor)))
+	for campo in CAMPOS_TEXTO:
+		if estado.get(campo) is String:
+			set(campo, estado[campo])
+	for campo in CAMPOS_LISTAS:
+		if estado.get(campo) is Array:
+			var validas: Array = []
+			for valor in estado[campo]:
+				if valor is String:
+					validas.append(valor)
+			set(campo, validas)
+	lista_silabas_seleccionada = bool(estado.get("lista_silabas_seleccionada", false))
+
+func reiniciar_partida() -> void:
+	for campo in CAMPOS_NUMERICOS:
+		set(campo, 1 if campo == "nivel" else 0)
+	for campo in CAMPOS_LISTAS:
+		set(campo, [])
+	for campo in CAMPOS_TEXTO:
+		set(campo, "")
+	lista_silabas_seleccionada = false
+
+func reiniciar_capitulo(capitulo: int) -> void:
+	nivel = capitulo
+	ronda = 0
+	errores_actual = 0
+	match capitulo:
+		1:
+			palabras_completadas = 0
+			lista_actual = []
+			ultima_palabra_fallida = ""
+		2:
+			palabras_completadas_silabas = 0
+			lista_actual_silabas = []
+			palabras_usadas_silabas = []
+			lista_silabas_seleccionada = false
+			ultima_palabra_fallida_silabas = ""
+		4:
+			oraciones_completadas = 0
+			lista_actual_oraciones = []
+			oraciones_usadas = []
+			ultima_oracion_fallida = ""
+
 func nombre_archivo_sin_acentos(texto: String) -> String:
 	var nombre := texto.strip_edges()
 	var con_acentos := "áéíóúüñÁÉÍÓÚÜÑ"

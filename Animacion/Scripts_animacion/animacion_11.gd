@@ -2,7 +2,6 @@ extends CanvasLayer
 
 # 1. Referencias exactas a tus nodos
 @onready var lumi: AnimatedSprite2D = $Node2D/Lumi
-@onready var luna: AnimatedSprite2D = $Node2D/Luna
 @onready var boton_siguiente: Button = $Siguiente
 @onready var boton_omitir: Button = $Omitir
 @onready var boton_volver: Button = $Volver
@@ -22,8 +21,6 @@ func _ready() -> void:
 	# 3. Iniciar la animación del elefante
 	if lumi:
 		lumi.play("Lumi")
-		if luna:
-			luna.play("Luna")
 		
 	# 4. Configurar el audio
 	if audio_cuento:

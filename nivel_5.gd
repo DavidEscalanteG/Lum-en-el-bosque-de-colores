@@ -11,8 +11,12 @@ var correctas = 0
 var total_preguntas = 13
 
 var indice_correcta_actual = 0
+var respuesta_registrada := false
 
 func _ready():
+	var guardado := Partidas.obtener_actividad(5)
+	pregunta_numero = clampi(int(guardado.get("pregunta", 0)), 0, total_preguntas)
+	correctas = clampi(int(guardado.get("correctas", 0)), 0, pregunta_numero)
 	$AudioStreamPlayer2D.play()
 	color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	color_rect.modulate = Color(1,1,1,0)
@@ -27,6 +31,9 @@ func _ready():
 
 
 func preguntar():
+	respuesta_registrada = false
+	for boton in [r1, r2, r3]:
+		boton.disabled = false
 	$Siguiente.visible = false
 	color_rect.modulate = Color(1,1,1,0)
 
@@ -40,10 +47,9 @@ func preguntar():
 	r3.modulate = Color(1,1,1,1)
 
 	if pregunta_numero >= total_preguntas:
-		var escena_resultados = load("res://Resultados.tscn").instantiate()
-		get_tree().root.add_child(escena_resultados)
-		escena_resultados.set_resultado(correctas)
-		queue_free()
+		Partidas.guardar_actividad(5, {"pregunta": pregunta_numero, "correctas": correctas})
+		Partidas.guardar_punto("res://resultados.tscn")
+		get_tree().change_scene_to_file("res://resultados.tscn")
 		return
 
 	var preguntas = [
@@ -111,6 +117,11 @@ func preguntar():
 
 
 func responder():
+	if respuesta_registrada:
+		return
+	respuesta_registrada = true
+	for boton in [r1, r2, r3]:
+		boton.disabled = true
 	var correcta = (respuesta == indice_correcta_actual)
 
 	var boton_presionado = null
@@ -143,6 +154,7 @@ func responder():
 		t.tween_property(boton_presionado, "modulate", Color(1,0,0), 0.3)
 		$recchazo.play()
 
+	Partidas.guardar_actividad(5, {"pregunta": pregunta_numero + 1, "correctas": correctas})
 	flash(Color(0,1,0) if correcta else Color(1,0,0))
 
 	$Siguiente.visible = true
@@ -169,6 +181,8 @@ func _on_respuesta_3_pressed():
 	responder()
 
 func _on_siguiente_pressed():
+	if not respuesta_registrada:
+		return
 	pregunta_numero += 1
 	preguntar()
 

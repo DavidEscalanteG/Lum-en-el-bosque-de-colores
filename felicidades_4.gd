@@ -20,5 +20,5 @@ func _on_button_pressed() -> void:
 # Botón “Mapa de niveles”
 func _on_button_2_pressed() -> void:
 	# Al salir al mapa, es buena idea resetear contadores si quieres que empiece de 0 luego
-	Global.oraciones_completadas = 0
+	Partidas.guardar()
 	get_tree().change_scene_to_file("res://Scenes/mapa_de_niveles.tscn")

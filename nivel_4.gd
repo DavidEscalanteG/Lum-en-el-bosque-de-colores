@@ -12,6 +12,7 @@ var palabras_objetivo: Array = []
 var pos = 0
 var errores_actual = 0
 var palabras_totales: Array = []
+var actividad_terminada := false
 
 # --- ELEGIR ORACIÓN ALEATORIA ---
 func elegir_oracion_aleatoria() -> String:
@@ -65,7 +66,10 @@ func _ready() -> void:
 	advertencia.visible = false
 
 	# ⭐ CARGAR LISTAS Y SELECCIONAR ORACIÓN ⭐
-	if Global.ultima_oracion_fallida != "":
+	var pendiente := Partidas.obtener_actividad(4)
+	if pendiente.has("oracion"):
+		oracion_objetivo = pendiente.oracion
+	elif Global.ultima_oracion_fallida != "":
 		oracion_objetivo = Global.ultima_oracion_fallida
 	else:	
 		# Si las listas están vacías (primera vez en el nivel), las llenamos
@@ -85,10 +89,13 @@ func _ready() -> void:
 		get_tree().change_scene_to_file("res://Animacion/animacion_21.tscn")
 		return
 
+	Partidas.guardar_actividad(4, {"oracion": oracion_objetivo})
 	preparar_oracion()
 
 # --- CLICK EN PALABRA ---
 func _on_item_list_item_clicked(index: int, _at_position: Vector2, _mouse_button_index: int) -> void:
+	if actividad_terminada or items.is_item_disabled(index):
+		return
 	var palabra = items.get_item_text(index)
 	if palabra == palabras_objetivo[pos]:
 		items.set_item_disabled(index, true)
@@ -109,9 +116,16 @@ func correcto() -> void:
 	barra.value += 1
 
 	if pos == palabras_objetivo.size() - 1:
+		actividad_terminada = true
 		# ⭐ ORACIÓN COMPLETADA ⭐
 		Global.oraciones_completadas += 1
 		Global.ultima_oracion_fallida = ""
+		Partidas.limpiar_actividad(4)
+		if Global.oraciones_completadas >= 10:
+			Partidas.completar_capitulo(4)
+			Partidas.guardar_punto("res://Animacion/animacion_21.tscn")
+		else:
+			Partidas.guardar_punto("res://felicidades_4.tscn")
 		errores_actual = 0
 
 		await get_tree().create_timer(0.5).timeout

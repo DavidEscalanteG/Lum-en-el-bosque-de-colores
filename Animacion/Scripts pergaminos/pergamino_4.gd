@@ -16,7 +16,8 @@ func _ready() -> void:
 	
 	# Conectar señales de los botones
 	boton_altavoz.pressed.connect(_on_boton_altavoz_pressed)
-	boton_comenzar.pressed.connect(_on_comenzar_pressed)
+	if not boton_comenzar.pressed.is_connected(_on_comenzar_pressed):
+		boton_comenzar.pressed.connect(_on_comenzar_pressed)
 
 # --- LÓGICA DEL ALTAVOZ ---
 

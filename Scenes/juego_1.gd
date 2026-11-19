@@ -11,6 +11,7 @@ extends CanvasLayer
 
 var pos = 0
 var errores_actual = 0
+var actividad_terminada := false
 
 func _ready() -> void:
 	randomize()
@@ -33,6 +34,10 @@ func _ready() -> void:
 			
 		palabra_objetivo = Global.lista_actual[Global.ronda]
 	
+	var pendiente := Partidas.obtener_actividad(1)
+	if pendiente.has("palabra"):
+		palabra_objetivo = pendiente.palabra
+	Partidas.guardar_actividad(1, {"palabra": palabra_objetivo})
 	label.set_text("")
 	items.max_columns = palabra_objetivo.length()
 	barra.max_value = palabra_objetivo.length()
@@ -52,6 +57,8 @@ func preparar_letras() -> void:
 		items.add_item(char)
 
 func _on_item_list_item_clicked(index: int, _at_position: Vector2, _mouse_button_index: int) -> void:
+	if actividad_terminada or items.is_item_disabled(index):
+		return
 	var letra_seleccionada = items.get_item_text(index)
 	
 	if letra_seleccionada == palabra_objetivo[pos]:
@@ -77,12 +84,17 @@ func correcto() -> void:
 		pos += 1
 
 func completar_palabra() -> void:
+	actividad_terminada = true
 	Global.palabras_completadas += 1
 	Global.ultima_palabra_fallida = ""
 	errores_actual = 0
 	
 	# Siempre avanzamos la ronda y vamos a felicidades
 	Global.ronda += 1
+	Partidas.limpiar_actividad(1)
+	if Global.palabras_completadas >= 10:
+		Partidas.completar_capitulo(1)
+	Partidas.guardar_punto("res://Scenes/Felicidades.tscn")
 	get_tree().change_scene_to_file("res://Scenes/Felicidades.tscn")
 
 func incorrecto() -> void:

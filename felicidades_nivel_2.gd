@@ -12,12 +12,13 @@ func _on_button_pressed() -> void:
 		Global.lista_actual_silabas = Global.palabras_silabas.duplicate()
 
 	# Avanzamos a la siguiente palabra
-	Global.ronda += 1
+	Global.ronda = Global.palabras_completadas_silabas
 
 	# -------------------------------
 	# ✔ Si ya NO hay más palabras → Nivel 3
 	# -------------------------------
 	if Global.ronda >= Global.lista_actual_silabas.size():
+		Partidas.completar_capitulo(2)
 		Global.ronda = 0
 		Global.palabras_completadas_silabas = 0
 		Global.palabras_usadas_silabas.clear()

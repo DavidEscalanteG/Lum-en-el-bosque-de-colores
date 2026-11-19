@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 # 1. Referencias exactas a tus nodos
-@onready var lumi: AnimatedSprite2D = $Node2D/Lumi
 @onready var bruno: AnimatedSprite2D = $Node2D/Bruno
 @onready var boton_siguiente: Button = $Siguiente
 @onready var boton_omitir: Button = $Omitir

@@ -39,7 +39,8 @@ func _ready() -> void:
 	# Conectar botones
 	boton_omitir.pressed.connect(_on_boton_omitir_pressed)
 	boton_siguiente.pressed.connect(_on_boton_siguiente_pressed)
-	boton_volver.pressed.connect(_on_volver_pressed)
+	if not boton_volver.pressed.is_connected(_on_volver_pressed):
+		boton_volver.pressed.connect(_on_volver_pressed)
 
 func _process(delta: float) -> void:
 	# Si el audio ya terminó, forzamos a Luna a alternar solo entre frame 0 y 2
