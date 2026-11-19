@@ -241,7 +241,7 @@ size_flags_stretch_ratio = 3.42
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_5jc6x")
 theme_override_styles/hover = SubResource("StyleBoxFlat_foow7")
-text = "Verdadero"
+text = "Si"
 
 [node name="BotonFalso" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -250,7 +250,7 @@ size_flags_stretch_ratio = 3.42
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_ol0td")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ai75a")
-text = "Falso"
+text = "No"
 
 [node name="Retroalimentación" type="Label" parent="."]
 offset_left = 335.0

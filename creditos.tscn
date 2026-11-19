@@ -165,7 +165,8 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
 theme_override_font_sizes/font_size = 30
 text = "Miguel Angel Gómez Herguera
-Roger Jesús Aguilar Uicab"
+Roger Jesús Aguilar Uicab
+David Ernesto Escalante García"
 horizontal_alignment = 1
 vertical_alignment = 1
 
