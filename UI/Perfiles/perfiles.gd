@@ -217,7 +217,7 @@ func mostrar_libro() -> void:
 		editar.add_theme_font_override("font", FUENTE)
 		editar.add_theme_font_size_override("font_size", 23)
 		editar.add_theme_color_override("font_color", TINTA)
-	_boton(Rect2(29, 856, 205, 67), "Volver", _salir)
+	_boton(Rect2(29, 856, 205, 67), "Volver", _volver_al_menu)
 	mensaje = _texto("", Rect2(310, 817, 1050, 32), 23)
 	mensaje.add_theme_color_override("font_color", Color("9c3027"))
 
@@ -349,6 +349,10 @@ func _continuar() -> void:
 func _error_guardado(texto: String) -> void:
 	if is_instance_valid(mensaje):
 		mensaje.text = texto
+
+
+func _volver_al_menu() -> void:
+	get_tree().change_scene_to_file("res://menu1.tscn")
 
 
 func _salir() -> void:

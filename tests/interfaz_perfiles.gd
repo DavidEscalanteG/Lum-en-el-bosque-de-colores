@@ -17,9 +17,17 @@ func comprobar(condicion: bool, descripcion: String) -> void:
 func _ejecutar() -> void:
 	var partidas := root.get_node("Partidas")
 	partidas.directorio = "res://.godot/pruebas-interfaz/" + str(Time.get_ticks_usec())
-	change_scene_to_file("res://login.tscn")
+	change_scene_to_file(ProjectSettings.get_setting("application/run/main_scene"))
+	await scene_changed
+	comprobar(current_scene.scene_file_path == "res://Scenes/inicio.tscn", "El juego arranca en la pantalla de inicio")
+	# Esperar al temporizador real, sin saltar la carga inicial.
 	await scene_changed
 	await process_frame
+	comprobar(current_scene.scene_file_path == "res://menu1.tscn", "Al terminar la carga se abre el menú principal")
+	current_scene.get_node("Siguiente").pressed.emit()
+	await scene_changed
+	await process_frame
+	comprobar(current_scene.scene_file_path == "res://login.tscn", "Jugar abre la selección de perfiles")
 	var perfiles := current_scene
 	comprobar(perfiles.pagina.get_node("Continuar").disabled, "Sin partidas, Continuar está desactivado")
 	perfiles.pagina.get_node("CrearNuevaPartida").pressed.emit()
@@ -53,6 +61,32 @@ func _ejecutar() -> void:
 	var datos: Dictionary = partidas.listar()[0]
 	comprobar(datos.id == id and datos.nombre == "Valeria" and datos.animal == "Mia", "Editar conserva la misma partida y actualiza nombre y animal")
 	comprobar(datos.desbloqueado == 1, "Editar conserva el avance")
+	perfiles.pagina.get_node("Continuar").pressed.emit()
+	await scene_changed
+	await process_frame
+	comprobar(current_scene.scene_file_path == partidas.ENTRADAS[0], "Una aventura pendiente retoma su punto guardado")
+	for capitulo in range(1, 6):
+		partidas.completar_capitulo(capitulo)
+	# La celebración sigue disponible al terminar la aventura por primera vez.
+	change_scene_to_file("res://Animacion/animacion_24.tscn")
+	await scene_changed
+	await process_frame
+	current_scene.get_node("Omitir").pressed.emit()
+	await scene_changed
+	await process_frame
+	comprobar(current_scene.scene_file_path == "res://celebracion.tscn", "El final de la historia conserva su celebración")
+	partidas.volver_a_perfiles()
+	await scene_changed
+	await process_frame
+	current_scene.pagina.get_node("Continuar").pressed.emit()
+	await scene_changed
+	await process_frame
+	comprobar(current_scene.scene_file_path == "res://Scenes/mapa_de_niveles.tscn", "Un perfil terminado vuelve al mapa al abrirlo desde disco")
+	comprobar(partidas.activa.completados.size() == 5 and not current_scene.get_node("Jugar5").disabled, "Conserva el progreso y permite repetir los capítulos")
+	partidas.volver_a_perfiles()
+	await scene_changed
+	await process_frame
+	perfiles = current_scene
 	for i in range(9):
 		partidas.crear("Aventura %d" % i, partidas.ANIMALES[i % 6])
 	partidas.activa = {}

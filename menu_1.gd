@@ -27,7 +27,7 @@ func _ready() -> void:
 
 # Botón Jugar (Siguiente)
 func _on_siguiente_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/mapa_de_niveles.tscn")
+	get_tree().change_scene_to_file("res://login.tscn")
 
 # Botón Instrucciones (Siguiente2)
 func _on_siguiente_2_pressed() -> void:

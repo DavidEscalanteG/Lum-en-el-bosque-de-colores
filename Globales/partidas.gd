@@ -318,7 +318,11 @@ func abrir_capitulo(capitulo: int) -> void:
 
 func continuar() -> void:
 	if not activa.is_empty():
-		get_tree().change_scene_to_file(activa.checkpoint)
+		# Una historia terminada vuelve al mapa para elegir qué capítulo repetir.
+		if activa.completados.size() == 5:
+			get_tree().change_scene_to_file("res://Scenes/mapa_de_niveles.tscn")
+		else:
+			get_tree().change_scene_to_file(activa.checkpoint)
 
 
 func volver_a_perfiles() -> void:
