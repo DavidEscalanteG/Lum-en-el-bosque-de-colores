@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://duvmpf0vfujw0" path="res://Sprites_imagenes/Sprites_Luna.png" id="4_ef5is"]
 [ext_resource type="AudioStream" uid="uid://faneocuo2csd" path="res://Animacion/Audios_personajes/Lumi/Lumi9.mp3" id="5_bnhko"]
 [ext_resource type="AudioStream" uid="uid://bxf7oaf8jl42c" path="res://Animacion/Audios_personajes/Lumi/Lumi10.mp3" id="6_us48e"]
-[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Música para Niños Prime.mp3" id="7_7ptw8"]
+[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Musica para Ninos Prime.mp3" id="7_7ptw8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_khg5h"]
 atlas = ExtResource("3_hu42o")

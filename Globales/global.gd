@@ -1,5 +1,13 @@
 extends Node
 
+func nombre_archivo_sin_acentos(texto: String) -> String:
+	var nombre := texto.strip_edges()
+	var con_acentos := "áéíóúüñÁÉÍÓÚÜÑ"
+	var sin_acentos := "aeiouunAEIOUUN"
+	for indice in range(con_acentos.length()):
+		nombre = nombre.replace(con_acentos[indice], sin_acentos[indice])
+	return nombre
+
 # --- Estado general ---
 var ronda := 0
 var ronda1 := 0

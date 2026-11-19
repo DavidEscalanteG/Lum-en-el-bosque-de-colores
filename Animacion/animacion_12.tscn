@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://60mxuebdrm6c" path="res://Animacion/Scripts_animacion/animacion_12.gd" id="1_706gg"]
 [ext_resource type="Texture2D" uid="uid://daeoehm14wpn4" path="res://Animacion_imagenes/Libro11.png" id="2_706gg"]
 [ext_resource type="Texture2D" uid="uid://c5aidwj5vxxnu" path="res://Animacion/Tilo_hablando.png" id="3_1cy2n"]
-[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Música para Niños Prime.mp3" id="4_1cy2n"]
+[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Musica para Ninos Prime.mp3" id="4_1cy2n"]
 [ext_resource type="AudioStream" uid="uid://c82mxgy7503bk" path="res://Animacion/Historia/H/His7.mp3" id="4_706gg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ts6y6"]

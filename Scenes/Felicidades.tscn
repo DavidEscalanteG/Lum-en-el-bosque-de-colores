@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://h8w7oi7x6mww" path="res://Scenes/estrella_fel.png" id="3_e71dt"]
 [ext_resource type="Texture2D" uid="uid://bc6lr1hlqkgi0" path="res://Scenes/Llama.png" id="4_qfvr1"]
 [ext_resource type="Texture2D" uid="uid://o63r4dq5qyln" path="res://Images/Lumi_Sprite1_Ojos.png" id="5_f547e"]
-[ext_resource type="AudioStream" uid="uid://c2ckyfev31i2p" path="res://Images/SpotiDownloader.com - Aplausos, Ovación - Limbo Project.mp3" id="6_21rh7"]
+[ext_resource type="AudioStream" uid="uid://c2ckyfev31i2p" path="res://Images/SpotiDownloader.com - Aplausos, Ovacion - Limbo Project.mp3" id="6_21rh7"]
 [ext_resource type="AudioStream" uid="uid://buwis4rvwm7rc" path="res://Scenes/fekicid.mp3" id="6_e71dt"]
 [ext_resource type="AudioStream" uid="uid://sj6hy38tl7pw" path="res://Sounds/Sonido-Burbuja.mp3" id="7_e71dt"]
 

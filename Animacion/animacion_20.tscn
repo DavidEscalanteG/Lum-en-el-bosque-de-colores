@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cuyjmjwii6a1t" path="res://Sprites_imagenes/Lumi_sin fondo/Sprites_Lumi.png" id="2_yc22a"]
 [ext_resource type="Texture2D" uid="uid://pw4bhged8wvn" path="res://Animacion/Mia_hablando.png" id="3_l1e6o"]
 [ext_resource type="Texture2D" uid="uid://db1chv72fj5fn" path="res://Animacion/lluvia.png" id="3_oca7d"]
-[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Música para Niños Prime.mp3" id="5_kybrm"]
+[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Musica para Ninos Prime.mp3" id="5_kybrm"]
 [ext_resource type="Texture2D" uid="uid://bt14tl0aan18h" path="res://Animacion_imagenes/Lumi_estatico_gris.png" id="5_oca7d"]
 [ext_resource type="Texture2D" uid="uid://duvmpf0vfujw0" path="res://Sprites_imagenes/Sprites_Luna.png" id="6_mscfx"]
 [ext_resource type="AudioStream" uid="uid://ddoembek8wu33" path="res://WhatsApp-Audio-2026-03-17-at-8.06.08-PM.mp3" id="8_oca7d"]

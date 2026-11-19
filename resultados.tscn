@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://tk8d4qhiiplh" path="res://resultados.gd" id="1_atr5v"]
 [ext_resource type="Texture2D" uid="uid://wikws4t4oyey" path="res://Images/Fondo Felicidades.png" id="1_fpedf"]
 [ext_resource type="Texture2D" uid="uid://haujf50juq8n" path="res://Scenes/tablita2.png" id="3_8tj61"]
-[ext_resource type="AudioStream" uid="uid://c2ckyfev31i2p" path="res://Images/SpotiDownloader.com - Aplausos, Ovaci+¦n - Limbo Project.mp3" id="4_l07eg"]
+[ext_resource type="AudioStream" uid="uid://c2ckyfev31i2p" path="res://Images/SpotiDownloader.com - Aplausos, Ovacion - Limbo Project.mp3" id="4_l07eg"]
 [ext_resource type="AudioStream" uid="uid://iiq3vtuhconq" path="res://Scripts/fekicid.mp3" id="5_e1s8d"]
 [ext_resource type="Texture2D" uid="uid://cuurmpavdyvlh" path="res://Scenes/Nico.png" id="6_5y50v"]
 [ext_resource type="Texture2D" uid="uid://o63r4dq5qyln" path="res://Images/Lumi_Sprite1_Ojos.png" id="7_ecvd6"]

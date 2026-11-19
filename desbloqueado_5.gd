@@ -6,6 +6,6 @@ func _on_timer_timeout() -> void:
 	if $Barra.value >= $Barra.max_value:
 		Global.ronda = 0
 		Global.palabras.shuffle()
-		get_tree().change_scene_to_file("res://Animacion/animación_22.tscn")
+		get_tree().change_scene_to_file("res://Animacion/animacion_22.tscn")
 	
 	

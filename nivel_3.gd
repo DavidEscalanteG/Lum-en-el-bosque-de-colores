@@ -34,7 +34,7 @@ var imagenes = {
 	"FERROCARRIL": preload("res://Img/FERROCARRIL.png"),
 	"JIRAFA": preload("res://Img/JIRAFA.png"),
 	"BICICLETA": preload("res://Img/BICICLETA.png"),
-	"NIÑO": preload("res://Img/NIÑO.png"),
+	"NIÑO": preload("res://Img/NINO.png"),
 	"LAPIZ": preload("res://Img/LAPIZ.png"),
 	"TIJERA": preload("res://Img/TIJERA.png"),
 	"BOTA": preload("res://Img/BOTA.png"),

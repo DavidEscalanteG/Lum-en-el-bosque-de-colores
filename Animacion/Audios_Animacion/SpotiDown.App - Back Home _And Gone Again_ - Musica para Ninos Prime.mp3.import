@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://46alb7kq43e3"
+path="res://.godot/imported/SpotiDown.App - Back Home _And Gone Again_ - Musica para Ninos Prime.mp3-3f5ea5ed220a7fcf489570b3e3a9afd3.mp3str"
+
+[deps]
+
+source_file="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Musica para Ninos Prime.mp3"
+dest_files=["res://.godot/imported/SpotiDown.App - Back Home _And Gone Again_ - Musica para Ninos Prime.mp3-3f5ea5ed220a7fcf489570b3e3a9afd3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

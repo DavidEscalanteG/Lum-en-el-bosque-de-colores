@@ -102,7 +102,7 @@ func incorrecto() -> void:
 
 # --- SISTEMA DE CARGA ROBUSTO ---
 func actualizar_imagen():
-	var nombre_base = palabra_objetivo.strip_edges()
+	var nombre_base = Global.nombre_archivo_sin_acentos(palabra_objetivo)
 	
 	# Creamos una lista de intentos para cubrir todas las posibilidades
 	var intentos = [

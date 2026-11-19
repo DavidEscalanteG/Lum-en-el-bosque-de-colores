@@ -150,7 +150,7 @@ func update_label():
 # --- ACTUALIZACIÓN MAESTRA DE CARGA DE IMÁGENES ---
 func actualizar_imagen():
 	# Eliminamos guiones para el nombre del archivo: "LU-MI" -> "LUMI"
-	var nombre_base = palabra_objetivo.replace("-", "")
+	var nombre_base = Global.nombre_archivo_sin_acentos(palabra_objetivo.replace("-", ""))
 	
 	# Lista de posibles combinaciones (Mayúsculas/Minúsculas + PNG/JPG)
 	var rutas_a_intentar = [

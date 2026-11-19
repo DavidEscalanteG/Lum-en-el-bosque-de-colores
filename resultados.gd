@@ -26,7 +26,7 @@ func _mostrar_resultado():
 
 func _on_boton_accion_pressed() -> void:
 	if correctas >= 7:
-		get_tree().change_scene_to_file("res://Animacion/animación_24.tscn")
+		get_tree().change_scene_to_file("res://Animacion/animacion_24.tscn")
 	else:
 		get_tree().change_scene_to_file("res://nivel_5.tscn")
 

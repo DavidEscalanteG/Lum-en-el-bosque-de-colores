@@ -145,7 +145,7 @@ func incorrecto() -> void:
 
 # --- ACTUALIZAR IMAGEN ---
 func actualizar_imagen():
-	var nombre_base = oracion_objetivo.strip_edges()
+	var nombre_base = Global.nombre_archivo_sin_acentos(oracion_objetivo)
 	var rutas = [
 		"res://Img/" + nombre_base + ".png",
 		"res://Img/" + nombre_base + ".jpg",

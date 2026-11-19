@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0v1mu7xry3qw"
+path="res://.godot/imported/SpotiDownloader.com - Musica Instrumental Relajante Y Sonidos De Pajaros - Incy Wincy Arana.mp3-ef194c7f895979f968b3dbc0b2184e61.mp3str"
+
+[deps]
+
+source_file="res://Scenes/SpotiDownloader.com - Musica Instrumental Relajante Y Sonidos De Pajaros - Incy Wincy Arana.mp3"
+dest_files=["res://.godot/imported/SpotiDownloader.com - Musica Instrumental Relajante Y Sonidos De Pajaros - Incy Wincy Arana.mp3-ef194c7f895979f968b3dbc0b2184e61.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

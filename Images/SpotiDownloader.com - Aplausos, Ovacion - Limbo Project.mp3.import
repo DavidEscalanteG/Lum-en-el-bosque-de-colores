@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2ckyfev31i2p"
+path="res://.godot/imported/SpotiDownloader.com - Aplausos, Ovacion - Limbo Project.mp3-98c44e939aa44be7e4566a01b5d57e4e.mp3str"
+
+[deps]
+
+source_file="res://Images/SpotiDownloader.com - Aplausos, Ovacion - Limbo Project.mp3"
+dest_files=["res://.godot/imported/SpotiDownloader.com - Aplausos, Ovacion - Limbo Project.mp3-98c44e939aa44be7e4566a01b5d57e4e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

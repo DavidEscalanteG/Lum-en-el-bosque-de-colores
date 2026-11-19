@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dof2dnubbim7n" path="res://Animacion_imagenes/Libro17.png" id="1_lthp5"]
 [ext_resource type="Texture2D" uid="uid://cuyjmjwii6a1t" path="res://Sprites_imagenes/Lumi_sin fondo/Sprites_Lumi.png" id="2_aipeo"]
 [ext_resource type="Texture2D" uid="uid://bx564c7i7sccn" path="res://Animacion_imagenes/lluvia.png" id="3_aipeo"]
-[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Música para Niños Prime.mp3" id="5_gvrr5"]
+[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Musica para Ninos Prime.mp3" id="5_gvrr5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qklf"]
 atlas = ExtResource("2_aipeo")

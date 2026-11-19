@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://duvmpf0vfujw0" path="res://Sprites_imagenes/Sprites_Luna.png" id="3_emupg"]
 [ext_resource type="Texture2D" uid="uid://dyesm6wiwb3xv" path="res://Animacion/Lumi_hablando.png" id="3_nvlxe"]
 [ext_resource type="AudioStream" uid="uid://d4i37t56sk2l5" path="res://Animacion/Audios_personajes/Lumi/Lumi1.mp3" id="5_nvlxe"]
-[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Música para Niños Prime.mp3" id="6_sf02p"]
+[ext_resource type="AudioStream" uid="uid://46alb7kq43e3" path="res://Animacion/Audios_Animacion/SpotiDown.App - Back Home _And Gone Again_ - Musica para Ninos Prime.mp3" id="6_sf02p"]
 [ext_resource type="AudioStream" uid="uid://bm1q8tj0a1kde" path="res://Animacion/Audios_personajes/Lumi/Lumi2.mp3" id="6_tlbjg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_khg5h"]
