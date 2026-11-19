@@ -264,6 +264,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TimerMemoria" type="Timer" parent="."]
+one_shot = true
 
 [node name="TimerRonda" type="Timer" parent="."]
 
