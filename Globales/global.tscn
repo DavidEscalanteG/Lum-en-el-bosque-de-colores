@@ -1,0 +1,12 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Globales/global.gd" id="script"]
+
+[node name="Global" type="Node"]
+script = ExtResource("script")
+palabras = Array[String](["ARBOL", "COLORES", "GIRASOL", "PINCEL", "PATO", "GATO", "AZUL", "AMARILLO", "MANZANA", "MANO"])
+palabras2 = Array[String](["MESA", "CASA", "LUNA", "PERRO", "FLOR", "CIELO", "NUBE", "RIO", "FUEGO", "SOL"])
+palabras_silabas = Array[String](["GO-MA", "PA-YA-SO", "CA-RRU-SEL", "SOM-BRI-LLA", "MU-SI-CO", "MO-NI-TO", "MA-LE-TA", "MU-ÑE-CO", "CE-PI-LLO", "PO-LI-CIA", "GUI-TA-RRA", "LAM-PA-RA", "GA-LLE-TA"])
+palabras_silabas2 = Array[String](["CA-RA-COL", "SI-RE-NA", "CU-CHA-RA", "MO-CHI-LA", "TO-MA-TE", "CO-RA-ZÓN", "PLA-YE-RA", "BU-RRI-TO", "SOM-BRE-RO", "CU-BE-TA", "PAN-TA-LÓN", "BO-TO-NES"])
+oraciones = Array[String](["El niño come una manzana", "La mamá lee un libro", "El perro corre rápido", "La casa es grande", "El gato duerme en la cama", "La mesa tiene flores", "El payaso ríe mucho", "La niña salta la cuerda", "El auto va muy rápido", "La señora cocina sopa"])
+oraciones2 = Array[String](["El caballo corre en el campo", "La tortuga camina lento", "El pájaro vuela alto", "La luna brilla en la noche", "El niño juega con la pelota", "La maestra escribe en el pizarrón", "El sol calienta el día", "El niño arma un rompecabezas", "La niña dibuja una flor", "El perro juega con la pelota"])

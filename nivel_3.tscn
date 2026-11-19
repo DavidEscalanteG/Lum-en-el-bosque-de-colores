@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c6y1iqgf06w8x"]
+[gd_scene load_steps=42 format=3 uid="uid://c6y1iqgf06w8x"]
 
 [ext_resource type="Script" uid="uid://qf6h2yb5r0ql" path="res://nivel_3.gd" id="1_iukwk"]
 [ext_resource type="Texture2D" uid="uid://3rmm066swdw8" path="res://Images/Fondos/Cueva.png" id="2_foow7"]
@@ -7,6 +7,26 @@
 [ext_resource type="AudioStream" uid="uid://c88ra088dfnoq" path="res://Images/rechazo.mp3" id="5_1col5"]
 [ext_resource type="AudioStream" uid="uid://dfwymg3ob3q0y" path="res://Sadhana.mp3" id="6_sfkl1"]
 [ext_resource type="AudioStream" uid="uid://brqtar1y2lpho" path="res://Images/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3" id="7_cdqb5"]
+[ext_resource type="Texture2D" path="res://Img/NIDO.png" id="actividad_0"]
+[ext_resource type="Texture2D" path="res://Img/TAPA.png" id="actividad_1"]
+[ext_resource type="Texture2D" path="res://Img/BOTE.png" id="actividad_2"]
+[ext_resource type="Texture2D" path="res://Img/SILLA.png" id="actividad_3"]
+[ext_resource type="Texture2D" path="res://Img/ABANICO.png" id="actividad_4"]
+[ext_resource type="Texture2D" path="res://Img/TELEVISION.png" id="actividad_5"]
+[ext_resource type="Texture2D" path="res://Img/CHOCOLATE.png" id="actividad_6"]
+[ext_resource type="Texture2D" path="res://Img/FERROCARRIL.png" id="actividad_7"]
+[ext_resource type="Texture2D" path="res://Img/JIRAFA.png" id="actividad_8"]
+[ext_resource type="Texture2D" path="res://Img/BICICLETA.png" id="actividad_9"]
+[ext_resource type="Texture2D" path="res://Img/NINO.png" id="actividad_10"]
+[ext_resource type="Texture2D" path="res://Img/LAPIZ.png" id="actividad_11"]
+[ext_resource type="Texture2D" path="res://Img/TIJERA.png" id="actividad_12"]
+[ext_resource type="Texture2D" path="res://Img/BOTA.png" id="actividad_13"]
+[ext_resource type="Texture2D" path="res://Img/RUEDA.png" id="actividad_14"]
+[ext_resource type="Texture2D" path="res://Img/AUTO.png" id="actividad_15"]
+[ext_resource type="Texture2D" path="res://Img/FOCO.png" id="actividad_16"]
+[ext_resource type="Texture2D" path="res://Img/TELEFONO.png" id="actividad_17"]
+[ext_resource type="Texture2D" path="res://Img/TAZA.png" id="actividad_18"]
+[ext_resource type="Texture2D" path="res://Img/LIBRO.png" id="actividad_19"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1col5"]
 bg_color = Color(0.14117648, 0.49019608, 0.8117647, 1)
@@ -158,6 +178,29 @@ corner_radius_bottom_left = 8
 
 [node name="Nivel3" type="CanvasLayer"]
 script = ExtResource("1_iukwk")
+imagenes = Dictionary[String, Texture2D]({
+"ABANICO": ExtResource("actividad_4"),
+"AUTO": ExtResource("actividad_15"),
+"BICICLETA": ExtResource("actividad_9"),
+"BOTA": ExtResource("actividad_13"),
+"BOTE": ExtResource("actividad_2"),
+"CHOCOLATE": ExtResource("actividad_6"),
+"FERROCARRIL": ExtResource("actividad_7"),
+"FOCO": ExtResource("actividad_16"),
+"JIRAFA": ExtResource("actividad_8"),
+"LAPIZ": ExtResource("actividad_11"),
+"LIBRO": ExtResource("actividad_19"),
+"NIDO": ExtResource("actividad_0"),
+"NIÑO": ExtResource("actividad_10"),
+"RUEDA": ExtResource("actividad_14"),
+"SILLA": ExtResource("actividad_3"),
+"TAPA": ExtResource("actividad_1"),
+"TAZA": ExtResource("actividad_18"),
+"TELEFONO": ExtResource("actividad_17"),
+"TELEVISION": ExtResource("actividad_5"),
+"TIJERA": ExtResource("actividad_12")
+})
+palabras = Array[String](["NIDO", "TAPA", "BOTE", "SILLA", "ABANICO", "TELEVISION", "CHOCOLATE", "FERROCARRIL", "JIRAFA", "BICICLETA", "NIÑO", "LAPIZ", "TIJERA", "BOTA", "RUEDA", "AUTO", "FOCO", "TELEFONO", "TAZA", "LIBRO"])
 
 [node name="Fondo" type="TextureRect" parent="."]
 offset_right = 1154.0
@@ -198,8 +241,10 @@ layout_mode = 2
 size_flags_horizontal = 4
 expand_mode = 1
 stretch_mode = 3
+texture = ExtResource("actividad_0")
 
 [node name="ContenedorPregunta" type="VBoxContainer" parent="."]
+visible = false
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
@@ -218,6 +263,7 @@ theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_1col5")
 horizontal_alignment = 1
 vertical_alignment = 1
+text = "¿Viste esto?"
 
 [node name="PalabraPregunta" type="Label" parent="ContenedorPregunta"]
 layout_mode = 2
@@ -227,8 +273,10 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_sfkl1")
 horizontal_alignment = 1
 vertical_alignment = 1
+text = "NIDO"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
 offset_left = 281.0
 offset_top = 422.0
 offset_right = 926.0
@@ -253,6 +301,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ai75a")
 text = "No"
 
 [node name="Retroalimentación" type="Label" parent="."]
+visible = false
 offset_left = 335.0
 offset_top = 325.0
 offset_right = 874.0
@@ -262,9 +311,11 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_cdqb5")
 horizontal_alignment = 1
 vertical_alignment = 1
+text = "¡Muy bien!"
 
 [node name="TimerMemoria" type="Timer" parent="."]
 one_shot = true
+wait_time = 5.0
 
 [node name="TimerRonda" type="Timer" parent="."]
 
@@ -280,6 +331,7 @@ texture = ExtResource("4_ai75a")
 flip_h = true
 
 [node name="Siguiente" type="Button" parent="."]
+visible = false
 offset_left = 489.0
 offset_top = 570.0
 offset_right = 715.0
@@ -308,6 +360,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_63hhv")
 text = "x"
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -330,7 +383,10 @@ volume_db = 0.196
 [node name="correcct" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_cdqb5")
 
-[connection signal="timeout" from="TimerMemoria" to="." method="_on_timer_memoria_timeout"]
-[connection signal="timeout" from="TimerRonda" to="." method="_on_timer_ronda_timeout"]
 [connection signal="pressed" from="Minimizar" to="." method="_on_minimizar_pressed"]
 [connection signal="pressed" from="Cerrar" to="." method="_on_cerrar_pressed"]
+
+[connection signal="timeout" from="TimerMemoria" to="." method="_on_TimerMemoria_timeout"]
+[connection signal="pressed" from="HBoxContainer/BotonVerdadero" to="." method="_on_respuesta" binds=[true]]
+[connection signal="pressed" from="HBoxContainer/BotonFalso" to="." method="_on_respuesta" binds=[false]]
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente"]

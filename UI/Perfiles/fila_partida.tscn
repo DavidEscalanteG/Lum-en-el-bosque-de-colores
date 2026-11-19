@@ -1,0 +1,125 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/retratos.png" id="1_il43u"]
+[ext_resource type="FontFile" path="res://UI/Perfiles/fuentes/LilitaOne-Regular.ttf" id="2_43fwd"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/seleccion.svg" id="3_fedlj"]
+
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/retrato_lumi.tres" id="personaje_previa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5e77"]
+bg_color = Color(1, 0.97, 0.88, 0.7)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8352941, 0.68235296, 0.44705883, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8gwx"]
+bg_color = Color(0.8156863, 0.9607843, 0.9137255, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.043137256, 0.7490196, 0.7882353, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="Theme" id="Theme_doolr"]
+Button/styles/normal = SubResource("StyleBoxFlat_y5e77")
+PartidaSeleccionada/base_type = &"Button"
+PartidaSeleccionada/styles/normal = SubResource("StyleBoxFlat_t8gwx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdeds"]
+bg_color = Color(0.7647059, 0.9411765, 0.9019608, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.043137256, 0.7490196, 0.7882353, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdvcy"]
+bg_color = Color(0.8784314, 0.9764706, 0.92941177, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.043137256, 0.7490196, 0.7882353, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ba1a5"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.043137256, 0.7490196, 0.7882353, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+
+[node name="FilaPartida" type="Button" unique_id=1906589697]
+custom_minimum_size = Vector2(560, 122)
+tooltip_text = "Tu aventura"
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_doolr")
+theme_type_variation = &"PartidaSeleccionada"
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xdeds")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wdvcy")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ba1a5")
+
+[node name="Recorte" type="Control" parent="." unique_id=185149019]
+clip_contents = true
+anchors_preset = 0
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 200.0
+offset_bottom = 115.0
+mouse_filter = 2
+
+[node name="Retrato" type="TextureRect" parent="Recorte" unique_id=1253300883]
+layout_mode = 0
+offset_right = 188.0
+offset_bottom = 145.0
+mouse_filter = 2
+texture = ExtResource("personaje_previa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nombre" type="Label" parent="." unique_id=1258814326]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 8.0
+offset_right = 492.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color(0.28627452, 0.13725491, 0.05882353, 1)
+theme_override_fonts/font = ExtResource("2_43fwd")
+theme_override_font_sizes/font_size = 50
+text = "Tu aventura"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Seleccion" type="TextureRect" parent="." unique_id=471436495]
+anchors_preset = 0
+offset_left = 494.0
+offset_top = 34.0
+offset_right = 549.0
+offset_bottom = 89.0
+mouse_filter = 2
+texture = ExtResource("3_fedlj")
+expand_mode = 1
+stretch_mode = 5

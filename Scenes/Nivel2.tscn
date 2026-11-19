@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://de3wn1lhw18x3"]
+[gd_scene load_steps=54 format=3 uid="uid://de3wn1lhw18x3"]
 
 [ext_resource type="Script" uid="uid://bs2yb84aeww2b" path="res://Scenes/nivel_2.gd" id="1_73c3a"]
 [ext_resource type="Texture2D" uid="uid://2bjkobgesm8g" path="res://Images/Fondos/Rio.png" id="1_opu0y"]
@@ -10,6 +10,31 @@
 [ext_resource type="AudioStream" uid="uid://brqtar1y2lpho" path="res://Images/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3" id="6_b0ly4"]
 [ext_resource type="AudioStream" uid="uid://0v1mu7xry3qw" path="res://Scenes/SpotiDownloader.com - Musica Instrumental Relajante Y Sonidos De Pajaros - Incy Wincy Arana.mp3" id="9_3obr3"]
 [ext_resource type="Texture2D" uid="uid://haujf50juq8n" path="res://Scenes/tablita2.png" id="10_ix6gb"]
+[ext_resource type="Texture2D" path="res://Img/GOMA.png" id="actividad_0"]
+[ext_resource type="Texture2D" path="res://Img/payaso.png" id="actividad_1"]
+[ext_resource type="Texture2D" path="res://Img/CARRUSEL.png" id="actividad_2"]
+[ext_resource type="Texture2D" path="res://Img/SOMBRILLA.png" id="actividad_3"]
+[ext_resource type="Texture2D" path="res://Img/MUSICO.png" id="actividad_4"]
+[ext_resource type="Texture2D" path="res://Img/MONITO.png" id="actividad_5"]
+[ext_resource type="Texture2D" path="res://Img/MALETA.png" id="actividad_6"]
+[ext_resource type="Texture2D" path="res://Img/MUNECO.png" id="actividad_7"]
+[ext_resource type="Texture2D" path="res://Img/CEPILLO.png" id="actividad_8"]
+[ext_resource type="Texture2D" path="res://Img/POLICIA.png" id="actividad_9"]
+[ext_resource type="Texture2D" path="res://Img/GUITARRA.png" id="actividad_10"]
+[ext_resource type="Texture2D" path="res://Img/LAMPARA.png" id="actividad_11"]
+[ext_resource type="Texture2D" path="res://Img/GALLETA.png" id="actividad_12"]
+[ext_resource type="Texture2D" path="res://Img/CARACOL.png" id="actividad_13"]
+[ext_resource type="Texture2D" path="res://Img/SIRENA.png" id="actividad_14"]
+[ext_resource type="Texture2D" path="res://Img/CUCHARA.png" id="actividad_15"]
+[ext_resource type="Texture2D" path="res://Img/MOCHILA.png" id="actividad_16"]
+[ext_resource type="Texture2D" path="res://Img/TOMATE.png" id="actividad_17"]
+[ext_resource type="Texture2D" path="res://Img/CORAZON.png" id="actividad_18"]
+[ext_resource type="Texture2D" path="res://Img/PLAYERA.png" id="actividad_19"]
+[ext_resource type="Texture2D" path="res://Img/BURRITO.png" id="actividad_20"]
+[ext_resource type="Texture2D" path="res://Img/SOMBRERO.png" id="actividad_21"]
+[ext_resource type="Texture2D" path="res://Img/CUBETA.png" id="actividad_22"]
+[ext_resource type="Texture2D" path="res://Img/PANTALON.png" id="actividad_23"]
+[ext_resource type="Texture2D" path="res://Img/BOTONES.png" id="actividad_24"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6t7mp"]
 bg_color = Color(0.0624739, 0.310982, 0.486406, 1)
@@ -48,7 +73,23 @@ default_font = SubResource("FontVariation_y3tg0")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3obr3"]
 
+[sub_resource type="StyleBoxFlat" id="BurbujaSilabas"]
+bg_color = Color(0.3, 0.5, 1, 0.9)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [sub_resource type="FontFile" id="FontFile_y3tg0"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -156,6 +197,34 @@ corner_radius_bottom_left = 8
 
 [node name="Nivel2" type="CanvasLayer"]
 script = ExtResource("1_73c3a")
+imagenes = Dictionary[String, Texture2D]({
+"BOTONES": ExtResource("actividad_24"),
+"BURRITO": ExtResource("actividad_20"),
+"CARACOL": ExtResource("actividad_13"),
+"CARRUSEL": ExtResource("actividad_2"),
+"CEPILLO": ExtResource("actividad_8"),
+"CORAZON": ExtResource("actividad_18"),
+"CUBETA": ExtResource("actividad_22"),
+"CUCHARA": ExtResource("actividad_15"),
+"GALLETA": ExtResource("actividad_12"),
+"GOMA": ExtResource("actividad_0"),
+"GUITARRA": ExtResource("actividad_10"),
+"LAMPARA": ExtResource("actividad_11"),
+"MALETA": ExtResource("actividad_6"),
+"MOCHILA": ExtResource("actividad_16"),
+"MONITO": ExtResource("actividad_5"),
+"MUNECO": ExtResource("actividad_7"),
+"MUSICO": ExtResource("actividad_4"),
+"PANTALON": ExtResource("actividad_23"),
+"PAYASO": ExtResource("actividad_1"),
+"PLAYERA": ExtResource("actividad_19"),
+"POLICIA": ExtResource("actividad_9"),
+"SIRENA": ExtResource("actividad_14"),
+"SOMBRERO": ExtResource("actividad_21"),
+"SOMBRILLA": ExtResource("actividad_3"),
+"TOMATE": ExtResource("actividad_17")
+})
+silabas_distractoras = Array[String](["PA", "ME", "LU", "CA", "SO", "TI", "RE", "LO"])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -227,6 +296,13 @@ allow_reselect = true
 auto_width = true
 auto_height = true
 text_overrun_behavior = 0
+theme_override_styles/normal = SubResource("BurbujaSilabas")
+max_columns = 4
+item_count = 4
+item_0/text = "MA"
+item_1/text = "PA"
+item_2/text = "GO"
+item_3/text = "TI"
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
@@ -244,10 +320,10 @@ theme_override_colors/font_color = Color(0.842014, 0.661922, 0, 1)
 theme_override_fonts/font = SubResource("FontFile_y3tg0")
 theme_override_font_sizes/font_size = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_k42pf")
-text = "PALABRA"
 label_settings = SubResource("LabelSettings_ix6gb")
 horizontal_alignment = 1
 vertical_alignment = 1
+text = "_ _ "
 
 [node name="ColorRect2" type="Button" parent="."]
 offset_left = 405.0
@@ -263,6 +339,7 @@ offset_top = 96.0
 offset_right = 711.0
 offset_bottom = 313.0
 expand_mode = 1
+texture = ExtResource("actividad_0")
 
 [node name="Advertencia" type="Label" parent="."]
 clip_contents = true
@@ -282,6 +359,8 @@ theme_override_font_sizes/font_size = 37
 theme_override_styles/normal = SubResource("StyleBoxFlat_70v5a")
 horizontal_alignment = 1
 vertical_alignment = 1
+text = "Cuidado, te has equivocado 2 veces"
+visible = false
 
 [node name="Felicidasde" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_k8txx")

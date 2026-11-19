@@ -20,16 +20,15 @@ var activa: Dictionary = {}
 var ultimo_error := ""
 var modo_desarrollador := "--modo-desarrollador" in OS.get_cmdline_user_args()
 var _escenas: Dictionary = {}
-var _hud: CanvasLayer
-var _volver: Button
-var _aviso: Label
+@onready var _volver: Button = $Interfaz/VolverAPerfiles
+@onready var _aviso: Label = $Interfaz/AvisoGuardado
 
 
 func _ready() -> void:
 	_registrar_escenas()
 	get_tree().scene_changed.connect(_al_cambiar_escena)
 	guardado_fallido.connect(_mostrar_error)
-	_crear_hud()
+	_volver.pressed.connect(volver_a_perfiles)
 
 
 func _registrar_escenas() -> void:
@@ -344,25 +343,6 @@ func _al_cambiar_escena() -> void:
 	if _escenas.has(ruta):
 		Global.nivel = int(_escenas[ruta])
 		guardar_punto(ruta)
-
-
-func _crear_hud() -> void:
-	_hud = CanvasLayer.new()
-	_hud.layer = 90
-	add_child(_hud)
-	_volver = Button.new()
-	_volver.position = Vector2(12, 8)
-	_volver.add_theme_font_size_override("font_size", 18)
-	_volver.visible = false
-	_volver.pressed.connect(volver_a_perfiles)
-	_hud.add_child(_volver)
-	_aviso = Label.new()
-	_aviso.position = Vector2(16, 48)
-	_aviso.add_theme_color_override("font_color", Color("8f251d"))
-	_aviso.add_theme_color_override("font_outline_color", Color.WHITE)
-	_aviso.add_theme_constant_override("outline_size", 6)
-	_aviso.add_theme_font_size_override("font_size", 18)
-	_hud.add_child(_aviso)
 
 
 func _mostrar_error(mensaje: String) -> void:

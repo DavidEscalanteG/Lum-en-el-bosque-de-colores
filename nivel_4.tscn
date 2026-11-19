@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cdu8b4w65v2md"]
+[gd_scene load_steps=39 format=3 uid="uid://cdu8b4w65v2md"]
 
 [ext_resource type="Script" uid="uid://jtoydy15kgsn" path="res://nivel_4.gd" id="1_hnomi"]
 [ext_resource type="Texture2D" uid="uid://bb2yk1hw6pskd" path="res://Images/Fondos/Pradera.png" id="1_r3ujc"]
@@ -9,6 +9,26 @@
 [ext_resource type="AudioStream" uid="uid://c88ra088dfnoq" path="res://Images/rechazo.mp3" id="7_vde86"]
 [ext_resource type="AudioStream" uid="uid://cqr5bkcywioit" path="res://aUDIOAAA.mp3" id="8_fxqjy"]
 [ext_resource type="AudioStream" uid="uid://brqtar1y2lpho" path="res://Images/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3" id="9_2xuwu"]
+[ext_resource type="Texture2D" path="res://Img/El nino come una manzana.png" id="actividad_0"]
+[ext_resource type="Texture2D" path="res://Img/La mama lee un libro.png" id="actividad_1"]
+[ext_resource type="Texture2D" path="res://Img/El perro corre rapido.png" id="actividad_2"]
+[ext_resource type="Texture2D" path="res://Img/La casa es grande.png" id="actividad_3"]
+[ext_resource type="Texture2D" path="res://Img/El gato duerme en la cama.png" id="actividad_4"]
+[ext_resource type="Texture2D" path="res://Img/La mesa tiene flores.png" id="actividad_5"]
+[ext_resource type="Texture2D" path="res://Img/El payaso rie mucho.png" id="actividad_6"]
+[ext_resource type="Texture2D" path="res://Img/La nina salta la cuerda.png" id="actividad_7"]
+[ext_resource type="Texture2D" path="res://Img/El auto va muy rapido.png" id="actividad_8"]
+[ext_resource type="Texture2D" path="res://Img/La senora cocina sopa.png" id="actividad_9"]
+[ext_resource type="Texture2D" path="res://Img/El caballo corre en el campo.png" id="actividad_10"]
+[ext_resource type="Texture2D" path="res://Img/La tortuga camina lento.png" id="actividad_11"]
+[ext_resource type="Texture2D" path="res://Img/El pajaro vuela alto.png" id="actividad_12"]
+[ext_resource type="Texture2D" path="res://Img/La luna brilla en la noche.png" id="actividad_13"]
+[ext_resource type="Texture2D" path="res://Img/El nino juega con la pelota.png" id="actividad_14"]
+[ext_resource type="Texture2D" path="res://Img/La maestra escribe en el pizarron.png" id="actividad_15"]
+[ext_resource type="Texture2D" path="res://Img/El sol calienta el dia.png" id="actividad_16"]
+[ext_resource type="Texture2D" path="res://Img/El nino arma un rompecabezas.png" id="actividad_17"]
+[ext_resource type="Texture2D" path="res://Img/La nina dibuja una flor.png" id="actividad_18"]
+[ext_resource type="Texture2D" path="res://Img/El perro juega con la pelota.png" id="actividad_19"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyiev"]
 bg_color = Color(0.0624739, 0.310982, 0.486406, 1)
@@ -92,6 +112,28 @@ corner_radius_bottom_left = 8
 
 [node name="Nivel4" type="CanvasLayer"]
 script = ExtResource("1_hnomi")
+imagenes = Dictionary[String, Texture2D]({
+"EL AUTO VA MUY RAPIDO": ExtResource("actividad_8"),
+"EL CABALLO CORRE EN EL CAMPO": ExtResource("actividad_10"),
+"EL GATO DUERME EN LA CAMA": ExtResource("actividad_4"),
+"EL NINO ARMA UN ROMPECABEZAS": ExtResource("actividad_17"),
+"EL NINO COME UNA MANZANA": ExtResource("actividad_0"),
+"EL NINO JUEGA CON LA PELOTA": ExtResource("actividad_14"),
+"EL PAJARO VUELA ALTO": ExtResource("actividad_12"),
+"EL PAYASO RIE MUCHO": ExtResource("actividad_6"),
+"EL PERRO CORRE RAPIDO": ExtResource("actividad_2"),
+"EL PERRO JUEGA CON LA PELOTA": ExtResource("actividad_19"),
+"EL SOL CALIENTA EL DIA": ExtResource("actividad_16"),
+"LA CASA ES GRANDE": ExtResource("actividad_3"),
+"LA LUNA BRILLA EN LA NOCHE": ExtResource("actividad_13"),
+"LA MAESTRA ESCRIBE EN EL PIZARRON": ExtResource("actividad_15"),
+"LA MAMA LEE UN LIBRO": ExtResource("actividad_1"),
+"LA MESA TIENE FLORES": ExtResource("actividad_5"),
+"LA NINA DIBUJA UNA FLOR": ExtResource("actividad_18"),
+"LA NINA SALTA LA CUERDA": ExtResource("actividad_7"),
+"LA SENORA COCINA SOPA": ExtResource("actividad_9"),
+"LA TORTUGA CAMINA LENTO": ExtResource("actividad_11")
+})
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1154.0
@@ -159,6 +201,13 @@ allow_reselect = true
 auto_height = true
 text_overrun_behavior = 0
 same_column_width = true
+max_columns = 5
+item_count = 5
+item_0/text = "manzana"
+item_1/text = "come"
+item_2/text = "El"
+item_3/text = "una"
+item_4/text = "niño"
 
 [node name="ImagenOracion" type="TextureRect" parent="."]
 offset_left = 325.0
@@ -166,6 +215,7 @@ offset_top = 188.0
 offset_right = 567.0
 offset_bottom = 405.0
 expand_mode = 1
+texture = ExtResource("actividad_0")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 306.0
@@ -174,10 +224,10 @@ offset_right = 566.0
 offset_bottom = 544.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
-text = "Oración"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+text = "_ _ _ _ _ "
 
 [node name="Advertencia" type="Label" parent="."]
 clip_contents = true
@@ -197,6 +247,8 @@ theme_override_font_sizes/font_size = 37
 theme_override_styles/normal = SubResource("StyleBoxFlat_my7bp")
 horizontal_alignment = 1
 vertical_alignment = 1
+text = "Cuidado, te has equivocado 2 veces"
+visible = false
 
 [node name="LumiSprite1Ojos2" type="Sprite2D" parent="."]
 position = Vector2(58, 483)

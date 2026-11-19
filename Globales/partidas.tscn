@@ -1,0 +1,28 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Globales/partidas.gd" id="script"]
+
+[node name="Partidas" type="Node" unique_id=2119394481]
+script = ExtResource("script")
+
+[node name="Interfaz" type="CanvasLayer" parent="." unique_id=751139126]
+layer = 90
+
+[node name="VolverAPerfiles" type="Button" parent="Interfaz" unique_id=1597616250]
+visible = false
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 12.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 18
+text = "Mis aventuras"
+
+[node name="AvisoGuardado" type="Label" parent="Interfaz" unique_id=1710901721]
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 16.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.56078434, 0.14509805, 0.11372549, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18

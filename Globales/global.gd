@@ -76,24 +76,16 @@ var nivel := 1
 # --- Nivel 1 ---
 var palabras_completadas := 0
 var errores_actual = 0
-var palabras = ["ARBOL", "COLORES", "GIRASOL", "PINCEL", "PATO", "GATO", "AZUL", "AMARILLO", "MANZANA", "MANO"]
-var palabras2 = ["MESA", "CASA", "LUNA", "PERRO", "FLOR", "CIELO", "NUBE", "RIO", "FUEGO", "SOL"]
+@export var palabras: Array[String] = []
+@export var palabras2: Array[String] = []
 var ultima_palabra_fallida: String = ""
 var lista_actual: Array = []
 
 # --- Nivel 2 (sílabas) ---
 var lista_silabas_seleccionada: bool = false
 
-var palabras_silabas = [
-	"GO-MA", "PA-YA-SO", "CA-RRU-SEL", "SOM-BRI-LLA",
-	"MU-SI-CO", "MO-NI-TO", "MA-LE-TA", "MU-ÑE-CO",
-	"CE-PI-LLO", "PO-LI-CIA", "GUI-TA-RRA", "LAM-PA-RA", "GA-LLE-TA"
-]
-var palabras_silabas2 = [
-	"CA-RA-COL", "SI-RE-NA", "CU-CHA-RA", "MO-CHI-LA", "TO-MA-TE",
-	"CO-RA-ZÓN", "PLA-YE-RA", "BU-RRI-TO", "SOM-BRE-RO", "CU-BE-TA",
-	"PAN-TA-LÓN", "BO-TO-NES"
-]
+@export var palabras_silabas: Array[String] = []
+@export var palabras_silabas2: Array[String] = []
 
 var lista_actual_silabas: Array = []
 var ultima_palabra_fallida_silabas: String = ""
@@ -132,31 +124,9 @@ func obtener_palabra_sin_repetir() -> String:
 # LISTAS DE ORACIONES
 # ---------------------------------------------------
 
-var oraciones = [
-	"El niño come una manzana",
-	"La mamá lee un libro",
-	"El perro corre rápido",
-	"La casa es grande",
-	"El gato duerme en la cama",
-	"La mesa tiene flores",
-	"El payaso ríe mucho",
-	"La niña salta la cuerda",
-	"El auto va muy rápido",
-	"La señora cocina sopa"
-]
+@export var oraciones: Array[String] = []
 
-var oraciones2 = [
-	"El caballo corre en el campo",
-	"La tortuga camina lento",
-	"El pájaro vuela alto",
-	"La luna brilla en la noche",
-	"El niño juega con la pelota",
-	"La maestra escribe en el pizarrón",
-	"El sol calienta el día",
-	"El niño arma un rompecabezas",
-	"La niña dibuja una flor",
-	"El perro juega con la pelota"
-]
+@export var oraciones2: Array[String] = []
 
 
 # ---------------------------------------------------

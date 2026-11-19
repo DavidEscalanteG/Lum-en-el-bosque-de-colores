@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://mw43lpsbpqtk"]
+[gd_scene load_steps=17 format=3 uid="uid://mw43lpsbpqtk"]
 
-[ext_resource type="Script" path="res://UI/Perfiles/perfiles.gd" id="1_perfiles"]
+[ext_resource type="PackedScene" path="res://UI/Perfiles/crear.tscn" id="crear"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/cuerpo_bruno.tres" id="cuerpo_Bruno"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/cuerpo_lumi.tres" id="cuerpo_Lumi"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/cuerpo_luna.tres" id="cuerpo_Luna"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/cuerpo_mia.tres" id="cuerpo_Mia"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/cuerpo_nico.tres" id="cuerpo_Nico"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/cuerpo_tilo.tres" id="cuerpo_Tilo"]
+[ext_resource type="PackedScene" path="res://UI/Perfiles/fila_partida.tscn" id="fila"]
+[ext_resource type="PackedScene" path="res://UI/Perfiles/libro.tscn" id="libro"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/retrato_bruno.tres" id="retrato_Bruno"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/retrato_lumi.tres" id="retrato_Lumi"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/retrato_luna.tres" id="retrato_Luna"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/retrato_mia.tres" id="retrato_Mia"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/retrato_nico.tres" id="retrato_Nico"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/retrato_tilo.tres" id="retrato_Tilo"]
+[ext_resource type="Script" uid="uid://bboa7benahh4l" path="res://UI/Perfiles/perfiles.gd" id="script"]
 
 [node name="LibroDeAventuras" type="Control"]
 layout_mode = 3
@@ -9,4 +24,72 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_perfiles")
+script = ExtResource("script")
+retratos = Dictionary[String, Texture2D]({
+"Bruno": ExtResource("retrato_Bruno"),
+"Lumi": ExtResource("retrato_Lumi"),
+"Luna": ExtResource("retrato_Luna"),
+"Mia": ExtResource("retrato_Mia"),
+"Nico": ExtResource("retrato_Nico"),
+"Tilo": ExtResource("retrato_Tilo")
+})
+cuerpos = Dictionary[String, Texture2D]({
+"Bruno": ExtResource("cuerpo_Bruno"),
+"Lumi": ExtResource("cuerpo_Lumi"),
+"Luna": ExtResource("cuerpo_Luna"),
+"Mia": ExtResource("cuerpo_Mia"),
+"Nico": ExtResource("cuerpo_Nico"),
+"Tilo": ExtResource("cuerpo_Tilo")
+})
+escena_fila = ExtResource("fila")
+
+[node name="Cielo" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.50980395, 0.84705883, 0.92941177, 1)
+
+[node name="Lienzo" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1672.0
+offset_bottom = 941.0
+
+[node name="Libro" parent="Lienzo" instance=ExtResource("libro")]
+layout_mode = 0
+
+[node name="Crear" parent="Lienzo" instance=ExtResource("crear")]
+visible = false
+
+[node name="MarcaAnimal" parent="Lienzo/Crear" index="9"]
+layout_mode = 0
+
+[node name="ConfirmarSalida" type="ConfirmationDialog" parent="."]
+oversampling_override = 1.0
+title = "Hasta pronto"
+size = Vector2i(203, 100)
+ok_button_text = "Salir"
+dialog_text = "¿Quieres salir del juego?"
+cancel_button_text = "Seguir aquí"
+
+[connection signal="pressed" from="Lienzo/Libro/CrearNuevaPartida" to="." method="mostrar_creacion"]
+[connection signal="pressed" from="Lienzo/Libro/Continuar" to="." method="_continuar"]
+[connection signal="pressed" from="Lienzo/Libro/Volver" to="." method="_volver_al_menu"]
+[connection signal="pressed" from="Lienzo/Libro/EditarPerfil" to="." method="_editar_perfil"]
+[connection signal="text_changed" from="Lienzo/Crear/NombreInput" to="." method="_actualizar_nombre"]
+[connection signal="text_submitted" from="Lienzo/Crear/NombreInput" to="." method="_nombre_enviado"]
+[connection signal="pressed" from="Lienzo/Crear/ElegirLumi" to="." method="_elegir_animal" binds= ["Lumi"]]
+[connection signal="pressed" from="Lienzo/Crear/ElegirLuna" to="." method="_elegir_animal" binds= ["Luna"]]
+[connection signal="pressed" from="Lienzo/Crear/ElegirMia" to="." method="_elegir_animal" binds= ["Mia"]]
+[connection signal="pressed" from="Lienzo/Crear/ElegirNico" to="." method="_elegir_animal" binds= ["Nico"]]
+[connection signal="pressed" from="Lienzo/Crear/ElegirTilo" to="." method="_elegir_animal" binds= ["Tilo"]]
+[connection signal="pressed" from="Lienzo/Crear/ElegirBruno" to="." method="_elegir_animal" binds= ["Bruno"]]
+[connection signal="pressed" from="Lienzo/Crear/Volver" to="." method="mostrar_libro"]
+[connection signal="pressed" from="Lienzo/Crear/ComenzarAventura" to="." method="_crear_partida"]
+[connection signal="confirmed" from="ConfirmarSalida" to="." method="_confirmar_salida"]
+
+[editable path="Lienzo/Libro"]
+[editable path="Lienzo/Crear"]

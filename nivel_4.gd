@@ -8,6 +8,9 @@ extends CanvasLayer
 @onready var advertencia: Label = $Advertencia
 
 @export var oracion_objetivo := "EL PERRO CORRE"
+## Texturas asignadas desde el Inspector; claves sin acentos ni guiones.
+@export var imagenes: Dictionary[String, Texture2D] = {}
+
 var palabras_objetivo: Array = []
 var pos = 0
 var errores_actual = 0
@@ -158,23 +161,11 @@ func incorrecto() -> void:
 		get_tree().change_scene_to_file("res://volver_ajugar_3.tscn")
 
 # --- ACTUALIZAR IMAGEN ---
-func actualizar_imagen():
-	var nombre_base = Global.nombre_archivo_sin_acentos(oracion_objetivo)
-	var rutas = [
-		"res://Img/" + nombre_base + ".png",
-		"res://Img/" + nombre_base + ".jpg",
-		"res://Img/" + nombre_base.to_lower() + ".png",
-		"res://Img/" + nombre_base.to_lower() + ".jpg"
-	]
-	
-	var tex = null
-	for r in rutas:
-		if ResourceLoader.exists(r):
-			tex = load(r)
-			break
-	
-	if tex:
-		imagen_palabra.texture = tex
+func actualizar_imagen() -> void:
+	var clave := Global.nombre_archivo_sin_acentos(oracion_objetivo.replace("-", "")).to_upper()
+	imagen_palabra.texture = imagenes.get(clave)
+	if imagen_palabra.texture == null:
+		push_warning("Asigna una imagen para %s en el Inspector del nivel." % clave)
 
 func update_label():
 	var sub = ""

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://duw1yw2u1c08g"]
+[gd_scene load_steps=48 format=3 uid="uid://duw1yw2u1c08g"]
 
 [ext_resource type="Script" uid="uid://bha8jt4m5wtu6" path="res://Scenes/juego_1.gd" id="1_abisv"]
 [ext_resource type="Texture2D" uid="uid://diuu7kw4ttbxf" path="res://Images/Fondos/Bosque.png" id="2_abisv"]
@@ -10,6 +10,26 @@
 [ext_resource type="AudioStream" uid="uid://c88ra088dfnoq" path="res://Images/rechazo.mp3" id="6_ecbqk"]
 [ext_resource type="AudioStream" uid="uid://lgbcdl7ge3xl" path="res://Images/music fondo (mp3cut.net).mp3" id="7_2yk78"]
 [ext_resource type="AudioStream" uid="uid://brqtar1y2lpho" path="res://Images/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3" id="8_y0ouq"]
+[ext_resource type="Texture2D" path="res://Img/ARBOL.jpg" id="actividad_0"]
+[ext_resource type="Texture2D" path="res://Img/COLORES.jpg" id="actividad_1"]
+[ext_resource type="Texture2D" path="res://Img/GIRASOL.png" id="actividad_2"]
+[ext_resource type="Texture2D" path="res://Img/PINCEL.png" id="actividad_3"]
+[ext_resource type="Texture2D" path="res://Img/PATO.jpg" id="actividad_4"]
+[ext_resource type="Texture2D" path="res://Img/GATO.jpg" id="actividad_5"]
+[ext_resource type="Texture2D" path="res://Img/AZUL.jpg" id="actividad_6"]
+[ext_resource type="Texture2D" path="res://Img/AMARILLO.png" id="actividad_7"]
+[ext_resource type="Texture2D" path="res://Img/MANZANA.jpg" id="actividad_8"]
+[ext_resource type="Texture2D" path="res://Img/MANO.jpg" id="actividad_9"]
+[ext_resource type="Texture2D" path="res://Img/MESA.png" id="actividad_10"]
+[ext_resource type="Texture2D" path="res://Img/CASA.JPG" id="actividad_11"]
+[ext_resource type="Texture2D" path="res://Img/LUNA.jpg" id="actividad_12"]
+[ext_resource type="Texture2D" path="res://Img/PERRO.png" id="actividad_13"]
+[ext_resource type="Texture2D" path="res://Img/FLOR.jpg" id="actividad_14"]
+[ext_resource type="Texture2D" path="res://Img/CIELO.jpg" id="actividad_15"]
+[ext_resource type="Texture2D" path="res://Img/NUBE.jpg" id="actividad_16"]
+[ext_resource type="Texture2D" path="res://Img/rio.jpg" id="actividad_17"]
+[ext_resource type="Texture2D" path="res://Img/FUEGO.jpg" id="actividad_18"]
+[ext_resource type="Texture2D" path="res://Img/SOL.jpg" id="actividad_19"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0y3t"]
 bg_color = Color(0.0624739, 0.310982, 0.486406, 1)
@@ -49,6 +69,15 @@ default_font = SubResource("FontVariation_3obr3")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nfkgj"]
 
 [sub_resource type="FontFile" id="FontFile_y04tm"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -156,6 +185,28 @@ corner_radius_bottom_left = 8
 
 [node name="juego_1" type="CanvasLayer"]
 script = ExtResource("1_abisv")
+imagenes = Dictionary[String, Texture2D]({
+"AMARILLO": ExtResource("actividad_7"),
+"ARBOL": ExtResource("actividad_0"),
+"AZUL": ExtResource("actividad_6"),
+"CASA": ExtResource("actividad_11"),
+"CIELO": ExtResource("actividad_15"),
+"COLORES": ExtResource("actividad_1"),
+"FLOR": ExtResource("actividad_14"),
+"FUEGO": ExtResource("actividad_18"),
+"GATO": ExtResource("actividad_5"),
+"GIRASOL": ExtResource("actividad_2"),
+"LUNA": ExtResource("actividad_12"),
+"MANO": ExtResource("actividad_9"),
+"MANZANA": ExtResource("actividad_8"),
+"MESA": ExtResource("actividad_10"),
+"NUBE": ExtResource("actividad_16"),
+"PATO": ExtResource("actividad_4"),
+"PERRO": ExtResource("actividad_13"),
+"PINCEL": ExtResource("actividad_3"),
+"RIO": ExtResource("actividad_17"),
+"SOL": ExtResource("actividad_19")
+})
 
 [node name="TextureRect" type="TextureRect" parent="."]
 clip_contents = true
@@ -231,6 +282,13 @@ allow_reselect = true
 auto_width = true
 auto_height = true
 text_overrun_behavior = 0
+max_columns = 5
+item_count = 5
+item_0/text = "R"
+item_1/text = "A"
+item_2/text = "B"
+item_3/text = "O"
+item_4/text = "L"
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
@@ -248,10 +306,10 @@ theme_override_colors/font_color = Color(0.842014, 0.661922, 0, 1)
 theme_override_fonts/font = SubResource("FontFile_y04tm")
 theme_override_font_sizes/font_size = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_uavbf")
-text = "PALABRA"
 label_settings = SubResource("LabelSettings_hkqf5")
 horizontal_alignment = 1
 vertical_alignment = 1
+text = "_ _ _ _ _ "
 
 [node name="ColorRect2" type="Button" parent="."]
 clip_contents = true
@@ -269,6 +327,7 @@ offset_top = 96.0
 offset_right = 711.0
 offset_bottom = 313.0
 expand_mode = 1
+texture = ExtResource("actividad_0")
 
 [node name="Advertencia" type="Label" parent="."]
 clip_contents = true
@@ -288,6 +347,8 @@ theme_override_font_sizes/font_size = 37
 theme_override_styles/normal = SubResource("StyleBoxFlat_yw38s")
 horizontal_alignment = 1
 vertical_alignment = 1
+text = "Cuidado, te has equivocado 2 veces"
+visible = false
 
 [node name="LumiSprite1Ojos" type="Polygon2D" parent="."]
 position = Vector2(1115, 435)

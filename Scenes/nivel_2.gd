@@ -8,6 +8,10 @@ extends CanvasLayer
 @onready var advertencia: Label = $Advertencia
 
 @export var palabra_objetivo := "PA-LA-BRA"
+## Texturas asignadas desde el Inspector; claves sin acentos ni guiones.
+@export var imagenes: Dictionary[String, Texture2D] = {}
+
+@export var silabas_distractoras: Array[String] = []
 var silabas_objetivo: Array = []
 var pos = 0
 var errores_actual = 0
@@ -25,7 +29,6 @@ func preparar_palabra():
 	silabas_objetivo = palabra_objetivo.split("-")
 
 	# Sílabas distractoras para rellenar la ItemList
-	var silabas_distractoras = ["PA", "ME", "LU", "CA", "SO", "TI", "RE", "LO"]
 	var distractoras_elegidas: Array = []
 	for i in range(2):
 		distractoras_elegidas.append(silabas_distractoras[randi() % silabas_distractoras.size()])
@@ -38,15 +41,6 @@ func preparar_palabra():
 
 	items.max_columns = silabas_totales.size()
 	
-	# Estilo visual tipo burbuja para las sílabas
-	var estilo_burbuja = StyleBoxFlat.new()
-	estilo_burbuja.bg_color = Color(0.3, 0.5, 1.0, 0.9)
-	estilo_burbuja.corner_radius_top_left = 12
-	estilo_burbuja.corner_radius_top_right = 12
-	estilo_burbuja.corner_radius_bottom_left = 12
-	estilo_burbuja.corner_radius_bottom_right = 12
-	items.add_theme_stylebox_override("normal", estilo_burbuja)
-
 	for silaba in silabas_totales:
 		items.add_item(silaba)
 
@@ -161,34 +155,11 @@ func update_label():
 	label.text = sub + "_ ".repeat(silabas_objetivo.size() - pos - 1)
 
 # --- ACTUALIZACIÓN MAESTRA DE CARGA DE IMÁGENES ---
-func actualizar_imagen():
-	# Eliminamos guiones para el nombre del archivo: "LU-MI" -> "LUMI"
-	var nombre_base = Global.nombre_archivo_sin_acentos(palabra_objetivo.replace("-", ""))
-	
-	# Lista de posibles combinaciones (Mayúsculas/Minúsculas + PNG/JPG)
-	var rutas_a_intentar = [
-		"res://Img/" + nombre_base + ".png",
-		"res://Img/" + nombre_base + ".jpg",
-		"res://Img/" + nombre_base.to_lower() + ".png",
-		"res://Img/" + nombre_base.to_lower() + ".jpg",
-		"res://Img/" + nombre_base.to_upper() + ".png",
-		"res://Img/" + nombre_base.to_upper() + ".jpg"
-	]
-	
-	var textura_encontrada = null
-	
-	for ruta in rutas_a_intentar:
-		if ResourceLoader.exists(ruta):
-			textura_encontrada = load(ruta)
-			if textura_encontrada:
-				print("Log: Cargada imagen desde " + ruta)
-				break 
-
-	if textura_encontrada:
-		imagen_palabra.texture = textura_encontrada
-	else:
-		push_error("Error: No se encontró imagen para " + nombre_base + " en res://Img/")
-		imagen_palabra.texture = null
+func actualizar_imagen() -> void:
+	var clave := Global.nombre_archivo_sin_acentos(palabra_objetivo.replace("-", "")).to_upper()
+	imagen_palabra.texture = imagenes.get(clave)
+	if imagen_palabra.texture == null:
+		push_warning("Asigna una imagen para %s en el Inspector del nivel." % clave)
 
 func _on_cerrar_pressed() -> void:
 	get_tree().quit()

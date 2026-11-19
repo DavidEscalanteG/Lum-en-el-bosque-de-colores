@@ -8,7 +8,10 @@ extends CanvasLayer
 var pregunta_numero = 0
 var respuesta = 0
 var correctas = 0
-var total_preguntas = 13
+@export var preguntas: Array[PreguntaLumi] = []
+var total_preguntas: int:
+	get:
+		return preguntas.size()
 
 var indice_correcta_actual = 0
 var respuesta_registrada := false
@@ -18,14 +21,8 @@ func _ready():
 	pregunta_numero = clampi(int(guardado.get("pregunta", 0)), 0, total_preguntas)
 	correctas = clampi(int(guardado.get("correctas", 0)), 0, pregunta_numero)
 	$AudioStreamPlayer2D.play()
-	color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	color_rect.modulate = Color(1,1,1,0)
 	$Siguiente.visible = false
-
-	# Texto siempre blanco
-	r1.self_modulate = Color(1,1,1)
-	r2.self_modulate = Color(1,1,1)
-	r3.self_modulate = Color(1,1,1)
 
 	preguntar()
 
@@ -52,58 +49,10 @@ func preguntar():
 		get_tree().change_scene_to_file("res://resultados.tscn")
 		return
 
-	var preguntas = [
-		"¿Cómo se llamaba la llama que Lumi encontró al inicio de la historia?",
-		"¿Qué tenía Luna en su cuello?",
-		"¿Por qué Lumi ayudó a Luna?",
-		"¿Quién ayudó a Lumi a cruzar el río?",
-		"¿Cómo creó Lumi un puente sobre el río?",
-		"¿Dónde encontró Lumi las bayas mágicas?",
-		"¿Qué le enseñó Tilo la Tortuga a Lumi?",
-		"¿Cómo se reveló la verdadera apariencia de Lumi?",
-		"¿Qué personaje tenía alas brillantes?",
-		"¿Qué celebraban los personajes en la Cascada Brillante?",
-		"¿Qué hace especial a Lumi en la historia?",
-		"¿Por qué es importante ser uno mismo?",
-		"¿Qué mensaje nos deja la historia de Lumi?"
-	]
+	$Pregunta.text = preguntas[pregunta_numero].texto
 
-	var opciones = [
-		["Lila", "Luna", "Luma"],
-		["Collar de estrellas", "Listón dorado", "Amuleto mágico"],
-		["Porque quería encontrar su camino", "Porque se mezclaron las letras", "Porque Luna perdió su collar"],
-		["Tilo la tortuga", "Mia la mariposa", "Bruno el búho"],
-		["Construyendo un barco", "Formando palabras mágicas", "Saltando sobre las piedras"],
-		["En el Bosque Brillante", "En la Cueva de Colores", "En la Pradera Mágica"],
-		["A tener paciencia", "A correr rápido", "A encontrar más bayas"],
-		["Con el reflejo del sol", "Con la lluvia", "Con un hechizo de Nico"],
-		["Mia la mariposa", "Bruno el búho", "Nico el zorro"],
-		["La llegada del invierno", "Que Lumi era especial tal como es", "La fiesta de Luna"],
-		["Sus colores únicos", "Su velocidad", "Su fuerza"],
-		["Porque cada persona es especial y única", "Para ser igual a los demás", "Porque es una regla del bosque"],
-		["Que debemos aceptarnos y valorar lo que nos hace únicos", "Que siempre debemos cambiar para encajar", "Que ser diferentes nos hace menos importantes"]
-	]
-
-	var correctas_indices = [
-		2, # Luna
-		1, # Listón dorado
-		2, # Luna perdió el collar
-		3, # Bruno
-		2, # Palabras mágicas
-		2, # Cueva de colores
-		1, # Paciencia
-		2, # Reflejo del sol
-		1, # Mia la mariposa
-		2, # Lumi es especial tal como es
-		1, # Sus colores únicos
-		1, # Cada persona es única
-		1  # Aceptarnos y valorarnos
-	]
-
-	$Pregunta.text = preguntas[pregunta_numero]
-
-	var opciones_originales = opciones[pregunta_numero]
-	var indice_correcta_original = correctas_indices[pregunta_numero] - 1
+	var opciones_originales = preguntas[pregunta_numero].opciones
+	var indice_correcta_original = preguntas[pregunta_numero].correcta - 1
 	var correcta_texto = opciones_originales[indice_correcta_original]
 
 	var opciones_mezcladas = opciones_originales.duplicate()

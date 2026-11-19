@@ -9,6 +9,9 @@ extends CanvasLayer
 
 @export var palabra_objetivo := "PALABRA"
 
+## Texturas asignadas desde el Inspector; claves sin acentos ni guiones.
+@export var imagenes: Dictionary[String, Texture2D] = {}
+
 var pos = 0
 var errores_actual = 0
 var actividad_terminada := false
@@ -113,34 +116,11 @@ func incorrecto() -> void:
 		get_tree().change_scene_to_file("res://volver_a_jugar.tscn")
 
 # --- SISTEMA DE CARGA ROBUSTO ---
-func actualizar_imagen():
-	var nombre_base = Global.nombre_archivo_sin_acentos(palabra_objetivo)
-	
-	# Creamos una lista de intentos para cubrir todas las posibilidades
-	var intentos = [
-		"res://Img/" + nombre_base + ".png",
-		"res://Img/" + nombre_base + ".jpg",
-		"res://Img/" + nombre_base.to_lower() + ".png",
-		"res://Img/" + nombre_base.to_lower() + ".jpg",
-		"res://Img/" + nombre_base.to_upper() + ".png",
-		"res://Img/" + nombre_base.to_upper() + ".jpg"
-	]
-	
-	var textura_cargada = null
-	
-	# Buscamos en la lista de intentos hasta encontrar uno que exista
-	for ruta in intentos:
-		if ResourceLoader.exists(ruta):
-			textura_cargada = load(ruta)
-			if textura_cargada:
-				break
-	
-	if textura_cargada:
-		imagen_palabra.texture = textura_cargada
-	else:
-		push_error("No se encontró imagen para: " + nombre_base)
-		# Opcional: poner una imagen por defecto para que no se vea vacío
-		# imagen_palabra.texture = load("res://Img/defecto.png")
+func actualizar_imagen() -> void:
+	var clave := Global.nombre_archivo_sin_acentos(palabra_objetivo.replace("-", "")).to_upper()
+	imagen_palabra.texture = imagenes.get(clave)
+	if imagen_palabra.texture == null:
+		push_warning("Asigna una imagen para %s en el Inspector del nivel." % clave)
 
 func update_label():
 	var completado = palabra_objetivo.left(pos + 1)

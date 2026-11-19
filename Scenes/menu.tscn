@@ -1,7 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://mpeargqy7wa1"]
+[gd_scene load_steps=33 format=3 uid="uid://mpeargqy7wa1"]
 
 [ext_resource type="Script" uid="uid://qf6h2yb5r0ql" path="res://nivel_3.gd" id="1_ldhss"]
 [ext_resource type="Texture2D" uid="uid://bdktqfjih4857" path="res://Scenes/Cascada.png" id="1_vd70p"]
+[ext_resource type="Texture2D" path="res://Img/NIDO.png" id="2_ocger"]
+[ext_resource type="Texture2D" path="res://Img/TAPA.png" id="3_i37ye"]
+[ext_resource type="Texture2D" path="res://Img/BOTE.png" id="4_jbv25"]
+[ext_resource type="Texture2D" path="res://Img/SILLA.png" id="5_nakb8"]
+[ext_resource type="Texture2D" path="res://Img/ABANICO.png" id="6_pde1v"]
+[ext_resource type="Texture2D" path="res://Img/TELEVISION.png" id="7_747ic"]
+[ext_resource type="Texture2D" path="res://Img/CHOCOLATE.png" id="8_x0760"]
+[ext_resource type="Texture2D" path="res://Img/FERROCARRIL.png" id="9_lvy56"]
+[ext_resource type="Texture2D" path="res://Img/JIRAFA.png" id="10_48g0d"]
+[ext_resource type="Texture2D" path="res://Img/BICICLETA.png" id="11_ygxe1"]
+[ext_resource type="Texture2D" path="res://Img/NINO.png" id="12_0idt7"]
+[ext_resource type="Texture2D" path="res://Img/LAPIZ.png" id="13_ki2a1"]
+[ext_resource type="Texture2D" path="res://Img/TIJERA.png" id="14_flyo0"]
+[ext_resource type="Texture2D" path="res://Img/BOTA.png" id="15_4dr7d"]
+[ext_resource type="Texture2D" path="res://Img/RUEDA.png" id="16_8cy2d"]
+[ext_resource type="Texture2D" path="res://Img/AUTO.png" id="17_lx18h"]
+[ext_resource type="Texture2D" path="res://Img/FOCO.png" id="18_mucp4"]
+[ext_resource type="Texture2D" path="res://Img/TELEFONO.png" id="19_v3l5l"]
+[ext_resource type="Texture2D" path="res://Img/TAZA.png" id="20_qpa3c"]
+[ext_resource type="Texture2D" path="res://Img/LIBRO.png" id="21_ui7cl"]
+[ext_resource type="AudioStream" path="res://Sadhana.mp3" id="23_0sm67"]
+[ext_resource type="AudioStream" path="res://Images/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3" id="24_mg0t0"]
+[ext_resource type="AudioStream" path="res://Images/rechazo.mp3" id="25_k5c6d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jc6x"]
 bg_color = Color(0.23529412, 0.78431374, 0.36078432, 1)
@@ -63,8 +86,33 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="Theme" id="Theme_iukwk"]
+
 [node name="Nivel3" type="CanvasLayer"]
 script = ExtResource("1_ldhss")
+palabras = Array[String](["NIDO", "TAPA", "BOTE", "SILLA", "ABANICO", "TELEVISION", "CHOCOLATE", "FERROCARRIL", "JIRAFA", "BICICLETA", "NIÑO", "LAPIZ", "TIJERA", "BOTA", "RUEDA", "AUTO", "FOCO", "TELEFONO", "TAZA", "LIBRO"])
+imagenes = Dictionary[String, Texture2D]({
+"ABANICO": ExtResource("6_pde1v"),
+"AUTO": ExtResource("17_lx18h"),
+"BICICLETA": ExtResource("11_ygxe1"),
+"BOTA": ExtResource("15_4dr7d"),
+"BOTE": ExtResource("4_jbv25"),
+"CHOCOLATE": ExtResource("8_x0760"),
+"FERROCARRIL": ExtResource("9_lvy56"),
+"FOCO": ExtResource("18_mucp4"),
+"JIRAFA": ExtResource("10_48g0d"),
+"LAPIZ": ExtResource("13_ki2a1"),
+"LIBRO": ExtResource("21_ui7cl"),
+"NIDO": ExtResource("2_ocger"),
+"NIÑO": ExtResource("12_0idt7"),
+"RUEDA": ExtResource("16_8cy2d"),
+"SILLA": ExtResource("5_nakb8"),
+"TAPA": ExtResource("3_i37ye"),
+"TAZA": ExtResource("20_qpa3c"),
+"TELEFONO": ExtResource("19_v3l5l"),
+"TELEVISION": ExtResource("7_747ic"),
+"TIJERA": ExtResource("14_flyo0")
+})
 
 [node name="Fondo" type="TextureRect" parent="."]
 offset_right = 1154.0
@@ -90,10 +138,12 @@ layout_mode = 2
 [node name="ImagenMostrar" type="TextureRect" parent="ContenedorMemoria"]
 layout_mode = 2
 size_flags_horizontal = 4
+texture = ExtResource("2_ocger")
 expand_mode = 1
 stretch_mode = 3
 
 [node name="ContenedorPregunta" type="VBoxContainer" parent="."]
+visible = false
 offset_left = 592.0
 offset_top = 202.0
 offset_right = 632.0
@@ -106,6 +156,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
 offset_left = 281.0
 offset_top = 422.0
 offset_right = 926.0
@@ -130,16 +181,20 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ai75a")
 text = "Falso"
 
 [node name="Retroalimentación" type="Label" parent="."]
+visible = false
 offset_left = 146.0
 offset_top = 357.0
 offset_right = 186.0
 offset_bottom = 380.0
 
 [node name="TimerMemoria" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
 
 [node name="TimerRonda" type="Timer" parent="."]
 
 [node name="Siguiente" type="Button" parent="."]
+visible = false
 offset_left = 489.0
 offset_top = 570.0
 offset_right = 715.0
@@ -149,5 +204,32 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_lmouq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_iukwk")
 text = "Siguiente"
 
-[connection signal="timeout" from="TimerMemoria" to="." method="_on_timer_memoria_timeout"]
-[connection signal="timeout" from="TimerRonda" to="." method="_on_timer_ronda_timeout"]
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_iukwk")
+color = Color(0.847059, 0.286275, 0.733333, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_0sm67")
+volume_db = 0.196
+
+[node name="correcct" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_mg0t0")
+
+[node name="recchazo" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 2)
+stream = ExtResource("25_k5c6d")
+
+
+[connection signal="timeout" from="TimerMemoria" to="." method="_on_TimerMemoria_timeout"]
+[connection signal="pressed" from="HBoxContainer/BotonVerdadero" to="." method="_on_respuesta" binds=[true]]
+[connection signal="pressed" from="HBoxContainer/BotonFalso" to="." method="_on_respuesta" binds=[false]]
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente"]

@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Globales/global.gd"
-Partidas="*res://Globales/partidas.gd"
+Global="*res://Globales/global.tscn"
+Partidas="*res://Globales/partidas.tscn"
 
 [display]
 

@@ -1,0 +1,367 @@
+[gd_scene load_steps=25 format=3 uid="uid://dex8som0fsbp"]
+
+[ext_resource type="Texture2D" uid="uid://dywn47vsv73we" path="res://UI/Perfiles/arte/libro.png" id="1_41jma"]
+[ext_resource type="FontFile" uid="uid://cl5tf673c7r44" path="res://UI/Perfiles/fuentes/LilitaOne-Regular.ttf" id="3_ttkfb"]
+[ext_resource type="PackedScene" path="res://UI/Perfiles/fila_partida.tscn" id="fila"]
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/cuerpo_lumi.tres" id="personaje_previa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_21hxg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mudkh"]
+bg_color = Color(0, 0.7, 0.7, 0.13)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.03137255, 0.73333335, 0.77254903, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcn12"]
+bg_color = Color(1, 1, 1, 0.12)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 0.7)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wot2h"]
+bg_color = Color(0.98, 0.93, 0.79, 0.68)
+border_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rp5nv"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.03137255, 0.73333335, 0.77254903, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ciy4n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ymqnc"]
+bg_color = Color(0, 0.7, 0.7, 0.13)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.03137255, 0.73333335, 0.77254903, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw22e"]
+bg_color = Color(1, 1, 1, 0.12)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 0.7)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0skd2"]
+bg_color = Color(0.98, 0.93, 0.79, 0.68)
+border_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vli0d"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.03137255, 0.73333335, 0.77254903, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_am8y3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gju3r"]
+bg_color = Color(0, 0.7, 0.7, 0.13)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.03137255, 0.73333335, 0.77254903, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnc5f"]
+bg_color = Color(1, 1, 1, 0.12)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 0.7)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pr8tp"]
+bg_color = Color(0.98, 0.93, 0.79, 0.68)
+border_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwe8c"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.03137255, 0.73333335, 0.77254903, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jwmqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_man6e"]
+bg_color = Color(0, 0.7, 0.7, 0.13)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.03137255, 0.73333335, 0.77254903, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ws1xj"]
+bg_color = Color(1, 1, 1, 0.12)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 0.7)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow8tg"]
+bg_color = Color(0.98, 0.93, 0.79, 0.68)
+border_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jouyy"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.03137255, 0.73333335, 0.77254903, 1)
+corner_radius_top_left = 36
+corner_radius_top_right = 36
+corner_radius_bottom_right = 36
+corner_radius_bottom_left = 36
+
+[node name="Libro" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1672.0
+offset_bottom = 941.0
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1672.0
+offset_bottom = 941.0
+mouse_filter = 2
+texture = ExtResource("1_41jma")
+expand_mode = 1
+
+[node name="ListaPartidas" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 318.0
+offset_right = 793.0
+offset_bottom = 725.0
+horizontal_scroll_mode = 0
+
+[node name="Filas" type="VBoxContainer" parent="ListaPartidas"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="EjemploPartida" parent="ListaPartidas/Filas" instance=ExtResource("fila")]
+layout_mode = 2
+
+[node name="Bienvenida" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 225.0
+offset_top = 365.0
+offset_right = 760.0
+offset_bottom = 625.0
+theme_override_colors/font_color = Color(0.28627452, 0.13725491, 0.05882353, 1)
+theme_override_fonts/font = ExtResource("3_ttkfb")
+theme_override_font_sizes/font_size = 34
+text = "¡Tu historia comienza aquí!
+
+Crea tu primera partida y elige
+un amigo del bosque."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 3
+
+[node name="CrearNuevaPartida" type="Button" parent="."]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 735.0
+offset_right = 755.0
+offset_bottom = 815.0
+tooltip_text = "Crear nueva partida"
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_21hxg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mudkh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mcn12")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wot2h")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rp5nv")
+
+[node name="Personaje" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 296.0
+offset_right = 1346.0
+offset_bottom = 581.0
+mouse_filter = 2
+texture = ExtResource("personaje_previa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 180.0
+offset_right = 1416.0
+offset_bottom = 252.0
+tooltip_text = "Tu próxima aventura"
+theme_override_colors/font_color = Color(0.28627452, 0.13725491, 0.05882353, 1)
+theme_override_fonts/font = ExtResource("3_ttkfb")
+theme_override_font_sizes/font_size = 43
+text = "Tu próxima aventura"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Capitulo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1006.0
+offset_top = 601.0
+offset_right = 1336.0
+offset_bottom = 659.0
+theme_override_colors/font_color = Color(0.28627452, 0.13725491, 0.05882353, 1)
+theme_override_fonts/font = ExtResource("3_ttkfb")
+theme_override_font_sizes/font_size = 35
+text = "Capítulo 1 de 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="UltimaVez" type="Label" parent="."]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 661.0
+offset_right = 1319.0
+offset_bottom = 696.0
+theme_override_colors/font_color = Color(0.28627452, 0.13725491, 0.05882353, 1)
+theme_override_fonts/font = ExtResource("3_ttkfb")
+theme_override_font_sizes/font_size = 25
+text = "Tu historia está por comenzar"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Continuar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 925.0
+offset_top = 706.0
+offset_right = 1433.0
+offset_bottom = 816.0
+tooltip_text = "Continuar"
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ciy4n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ymqnc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mw22e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0skd2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vli0d")
+disabled = true
+
+[node name="Volver" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 856.0
+offset_right = 234.0
+offset_bottom = 923.0
+tooltip_text = "Volver"
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_am8y3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gju3r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fnc5f")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pr8tp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_bwe8c")
+
+[node name="Mensaje" type="Label" parent="."]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 817.0
+offset_right = 1360.0
+offset_bottom = 849.0
+theme_override_colors/font_color = Color(0.6117647, 0.1882353, 0.15294118, 1)
+theme_override_fonts/font = ExtResource("3_ttkfb")
+theme_override_font_sizes/font_size = 23
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="EditarPerfil" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1318.0
+offset_top = 663.0
+offset_right = 1421.0
+offset_bottom = 697.0
+tooltip_text = "Editar perfil"
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.28627452, 0.13725491, 0.05882353, 1)
+theme_override_fonts/font = ExtResource("3_ttkfb")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jwmqv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_man6e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ws1xj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ow8tg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jouyy")
+text = "Editar"

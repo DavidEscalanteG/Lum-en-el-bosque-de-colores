@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://itt0gghb4iu8"]
+[gd_scene load_steps=33 format=3 uid="uid://itt0gghb4iu8"]
 
 [ext_resource type="Texture2D" uid="uid://bdktqfjih4857" path="res://Scenes/Cascada.png" id="1_1blie"]
 [ext_resource type="Script" uid="uid://dr10x7h0vm4yf" path="res://nivel_5.gd" id="1_a817w"]
@@ -8,6 +8,79 @@
 [ext_resource type="AudioStream" uid="uid://vnd8ory72wj5" path="res://nivel.mp3" id="6_3sr7g"]
 [ext_resource type="AudioStream" uid="uid://c88ra088dfnoq" path="res://Images/rechazo.mp3" id="7_52s7n"]
 [ext_resource type="AudioStream" uid="uid://brqtar1y2lpho" path="res://Images/Descargar Efecto de Sonido Acierto  Correcto en HD (Sin Copyright).mp3" id="8_v4o7m"]
+[ext_resource type="Script" path="res://UI/Actividad/pregunta.gd" id="pregunta_script"]
+
+[sub_resource type="Resource" id="Pregunta_01"]
+script = ExtResource("pregunta_script")
+texto = "¿Cómo se llamaba la llama que Lumi encontró al inicio de la historia?"
+opciones = Array[String](["Lila", "Luna", "Luma"])
+correcta = 2
+
+[sub_resource type="Resource" id="Pregunta_02"]
+script = ExtResource("pregunta_script")
+texto = "¿Qué tenía Luna en su cuello?"
+opciones = Array[String](["Collar de estrellas", "Listón dorado", "Amuleto mágico"])
+
+[sub_resource type="Resource" id="Pregunta_03"]
+script = ExtResource("pregunta_script")
+texto = "¿Por qué Lumi ayudó a Luna?"
+opciones = Array[String](["Porque quería encontrar su camino", "Porque se mezclaron las letras", "Porque Luna perdió su collar"])
+correcta = 2
+
+[sub_resource type="Resource" id="Pregunta_04"]
+script = ExtResource("pregunta_script")
+texto = "¿Quién ayudó a Lumi a cruzar el río?"
+opciones = Array[String](["Tilo la tortuga", "Mia la mariposa", "Bruno el búho"])
+correcta = 3
+
+[sub_resource type="Resource" id="Pregunta_05"]
+script = ExtResource("pregunta_script")
+texto = "¿Cómo creó Lumi un puente sobre el río?"
+opciones = Array[String](["Construyendo un barco", "Formando palabras mágicas", "Saltando sobre las piedras"])
+correcta = 2
+
+[sub_resource type="Resource" id="Pregunta_06"]
+script = ExtResource("pregunta_script")
+texto = "¿Dónde encontró Lumi las bayas mágicas?"
+opciones = Array[String](["En el Bosque Brillante", "En la Cueva de Colores", "En la Pradera Mágica"])
+correcta = 2
+
+[sub_resource type="Resource" id="Pregunta_07"]
+script = ExtResource("pregunta_script")
+texto = "¿Qué le enseñó Tilo la Tortuga a Lumi?"
+opciones = Array[String](["A tener paciencia", "A correr rápido", "A encontrar más bayas"])
+
+[sub_resource type="Resource" id="Pregunta_08"]
+script = ExtResource("pregunta_script")
+texto = "¿Cómo se reveló la verdadera apariencia de Lumi?"
+opciones = Array[String](["Con el reflejo del sol", "Con la lluvia", "Con un hechizo de Nico"])
+correcta = 2
+
+[sub_resource type="Resource" id="Pregunta_09"]
+script = ExtResource("pregunta_script")
+texto = "¿Qué personaje tenía alas brillantes?"
+opciones = Array[String](["Mia la mariposa", "Bruno el búho", "Nico el zorro"])
+
+[sub_resource type="Resource" id="Pregunta_10"]
+script = ExtResource("pregunta_script")
+texto = "¿Qué celebraban los personajes en la Cascada Brillante?"
+opciones = Array[String](["La llegada del invierno", "Que Lumi era especial tal como es", "La fiesta de Luna"])
+correcta = 2
+
+[sub_resource type="Resource" id="Pregunta_11"]
+script = ExtResource("pregunta_script")
+texto = "¿Qué hace especial a Lumi en la historia?"
+opciones = Array[String](["Sus colores únicos", "Su velocidad", "Su fuerza"])
+
+[sub_resource type="Resource" id="Pregunta_12"]
+script = ExtResource("pregunta_script")
+texto = "¿Por qué es importante ser uno mismo?"
+opciones = Array[String](["Porque cada persona es especial y única", "Para ser igual a los demás", "Porque es una regla del bosque"])
+
+[sub_resource type="Resource" id="Pregunta_13"]
+script = ExtResource("pregunta_script")
+texto = "¿Qué mensaje nos deja la historia de Lumi?"
+opciones = Array[String](["Que debemos aceptarnos y valorar lo que nos hace únicos", "Que siempre debemos cambiar para encajar", "Que ser diferentes nos hace menos importantes"])
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2vqv"]
 bg_color = Color(1, 0.7013564, 0.1662032, 1)
@@ -111,6 +184,7 @@ corner_radius_bottom_left = 8
 
 [node name="Nivel 5" type="CanvasLayer"]
 script = ExtResource("1_a817w")
+preguntas = Array[ExtResource("pregunta_script")]([SubResource("Pregunta_01"), SubResource("Pregunta_02"), SubResource("Pregunta_03"), SubResource("Pregunta_04"), SubResource("Pregunta_05"), SubResource("Pregunta_06"), SubResource("Pregunta_07"), SubResource("Pregunta_08"), SubResource("Pregunta_09"), SubResource("Pregunta_10"), SubResource("Pregunta_11"), SubResource("Pregunta_12"), SubResource("Pregunta_13")])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1154.0
@@ -137,6 +211,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_q2vqv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_52s7n")
 autowrap_mode = 3
+text = "Lila"
 
 [node name="Respuesta 2" type="Button" parent="."]
 offset_left = 378.0
@@ -152,6 +227,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_q2vqv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_52s7n")
 autowrap_mode = 3
+text = "Luna"
 
 [node name="Respuesta 3" type="Button" parent="."]
 offset_left = 379.0
@@ -167,6 +243,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_q2vqv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_52s7n")
 autowrap_mode = 3
+text = "Luma"
 
 [node name="Pregunta" type="Label" parent="."]
 anchors_preset = 5
@@ -183,6 +260,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_a817w")
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 161
+text = "¿Cómo se llamaba la llama que Lumi encontró al inicio de la historia?"
 
 [node name="Resultado" type="Label" parent="."]
 offset_left = 404.0
@@ -221,6 +299,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3sr7g")
 theme_override_styles/hover = SubResource("StyleBoxFlat_v4o7m")
 text = "Siguiente"
+visible = false
 
 [node name="LumiSprite1Ojos" type="Sprite2D" parent="."]
 position = Vector2(995.00006, 440)
@@ -238,8 +317,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 theme = SubResource("Theme_3sr7g")
+mouse_filter = 2
+modulate = Color(1, 1, 1, 0)
 
 [node name="recchazo" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(0, 2)

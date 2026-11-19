@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cn060b5n7wa1o"]
+[gd_scene load_steps=7 format=3 uid="uid://cn060b5n7wa1o"]
 
 [ext_resource type="Texture2D" uid="uid://cjfjnow8cfqwd" path="res://Images/Fondos/Lumi_Sprite1_Ojos.png" id="1_37rai"]
 [ext_resource type="Texture2D" uid="uid://b5nf811jyl0fi" path="res://Images/Fondos/Lumi_Sprite5_Ojos.png" id="1_tg4cr"]
 [ext_resource type="Script" uid="uid://blwd0auy0rjl3" path="res://canvas_layer.gd" id="1_w4oxd"]
-[ext_resource type="Script" uid="uid://dgmp4lnyx8xo8" path="res://animated_sprite_2d.gd" id="4_fsbdh"]
 [ext_resource type="Script" uid="uid://bhq05b5fsawfx" path="res://collision_shape_2d.gd" id="5_n6wdb"]
 [ext_resource type="Script" uid="uid://c3nxhagty24iq" path="res://timer.gd" id="6_g3huw"]
 
@@ -37,7 +36,6 @@ position = Vector2(551, 466)
 sprite_frames = SubResource("SpriteFrames_0qrqu")
 animation = &"blink"
 frame_progress = 0.4430159
-script = ExtResource("4_fsbdh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
 script = ExtResource("5_n6wdb")

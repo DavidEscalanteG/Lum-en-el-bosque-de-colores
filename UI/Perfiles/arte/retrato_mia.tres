@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3]
+
+[ext_resource type="Texture2D" path="res://UI/Perfiles/arte/retratos.png" id="1_4bsgn"]
+
+[resource]
+atlas = ExtResource("1_4bsgn")
+region = Rect2(1024, 0, 512, 480)
